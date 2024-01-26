@@ -28,12 +28,52 @@ export const siteConfig = {
     links,
     footerNav: [
         {
-            title: 'Services',
+            title: 'Bond Cleaning',
             items: [
-                { title: 'Bond Cleaning', href: '/bond-cleaning-sydney' },
                 {
-                    title: 'Move Out Cleaning',
-                    href: '/move-out-cleaning-sydney',
+                    title: 'Bond Cleaning Sydney',
+                    href: '/bond-cleaning-sydney',
+                },
+                {
+                    title: 'Bond Cleaning Brisbane',
+                    href: '/bond-cleaning-brisbane',
+                },
+                {
+                    title: 'Bond Cleaning Canberra',
+                    href: '/bond-cleaning-canberra',
+                },
+                {
+                    title: 'Bond Cleaning Gold Coast',
+                    href: '/bond-cleaning-gold-coast',
+                },
+                {
+                    title: 'Bond Cleaning Perth',
+                    href: '/bond-cleaning-perth',
+                },
+            ],
+        },
+        {
+            title: 'Vacate Cleaning',
+            items: [
+                {
+                    title: 'Vacate Cleaning Sydney',
+                    href: '/vacate-cleaning-sydney',
+                },
+                {
+                    title: 'Vacate Cleaning Brisbane',
+                    href: '/vacate-cleaning-brisbane',
+                },
+                {
+                    title: 'Vacate Cleaning Canberra',
+                    href: '/vacate-cleaning-canberra',
+                },
+                {
+                    title: 'Vacate Cleaning Gold Coast',
+                    href: '/vacate-cleaning-gold-coast',
+                },
+                {
+                    title: 'Vacate Cleaning Perth',
+                    href: '/vacate-cleaning-perth',
                 },
             ],
         },
