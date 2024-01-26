@@ -18,7 +18,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         lastModified: new Date().toISOString(),
     }));
 
-    const routes = ['', '/pricing', '/blog'].map(route => ({
+    const routes = [
+        '',
+        '/pricing',
+        '/blog',
+        '/bond-cleaning-sydney',
+        '/bond-cleaning-canberra',
+        '/bond-cleaning-brisbane',
+        '/bond-cleaning-canberra',
+        '/bond-cleaning-gold-coast',
+        '/bond-cleaning-perth',
+        
+        '/vacate-cleaning-sydney',
+        '/vacate-cleaning-canberra',
+        '/vacate-cleaning-brisbane',
+        '/vacate-cleaning-canberra',
+        '/vacate-cleaning-gold-coast',
+        '/vacate-cleaning-perth',
+    ].map(route => ({
         url: absoluteUrl(route),
         lastModified: new Date().toISOString(),
     }));
