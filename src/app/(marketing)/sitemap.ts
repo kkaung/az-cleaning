@@ -22,13 +22,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         '',
         '/pricing',
         '/blog',
+
         '/bond-cleaning-sydney',
         '/bond-cleaning-canberra',
         '/bond-cleaning-brisbane',
         '/bond-cleaning-canberra',
         '/bond-cleaning-gold-coast',
         '/bond-cleaning-perth',
-        
+
         '/vacate-cleaning-sydney',
         '/vacate-cleaning-canberra',
         '/vacate-cleaning-brisbane',

@@ -15,17 +15,25 @@ import {
     TableRow,
 } from '@/components/ui/table';
 import { siteConfig } from '@/configs/site';
+import { getPathname } from '@/lib/next';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import React from 'react';
 
 export const runtime = 'edge';
 
-export const metadata: Metadata = {
-    title: 'End Of Lease - Bond Cleaning Pricing ',
-    description:
-        'Check our detailed cleaning pricing list. Professional & reliable service, 100% satisfaction guarantee. Book online in 60 seconds.',
-};
+export async function generateMetadata(): Promise<Metadata> {
+    const pathname = getPathname();
+
+    return {
+        title: 'End Of Lease - Bond Cleaning Pricing ',
+        description:
+            'Check our detailed cleaning pricing list. Professional & reliable service, 100% satisfaction guarantee. Book online in 60 seconds.',
+        alternates: {
+            canonical: pathname,
+        },
+    };
+}
 
 const pricingList = [
     {
