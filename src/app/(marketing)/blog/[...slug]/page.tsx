@@ -13,6 +13,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { headingVariants } from '@/components/page-header';
 import { getPathname } from '@/lib/next';
+import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 
 interface PostPageProps {
     params: {
@@ -105,7 +106,7 @@ export default async function PostPage({ params }: PostPageProps) {
                 See all posts
             </Link>
             <div>
-                <h1 className={headingVariants({})}>{post.title}</h1>
+                <h1 className={cn(headingVariants({}))}>{post.title}</h1>
                 <div className="mt-4">
                     {post.date && (
                         <time
@@ -202,6 +203,14 @@ export default async function PostPage({ params }: PostPageProps) {
                     </CardContent>
                 </Card>
             </section>
+            <Breadcrumbs
+                segments={[
+                    { title: 'Home', href: '/' },
+                    { title: 'Blog', href: '/blog' },
+                ]}
+                dottable={false}
+                className="mt-12 mb-6"
+            />
             <div className="flex justify-center py-6 lg:py-10">
                 <Link
                     href="/blog"

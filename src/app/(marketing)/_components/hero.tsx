@@ -73,6 +73,14 @@ export default function Hero({ ...props }: HeroProps) {
                                     aria-hidden
                                     strokeWidth={3}
                                 />
+                                <p>Transparent pricing, no hidden fees</p>
+                            </div>
+                            <div className="flex items-center">
+                                <Icons.check
+                                    className="w-4 h-4 mr-2"
+                                    aria-hidden
+                                    strokeWidth={3}
+                                />
                                 <p>
                                     Trusted by 1000+ monthly movers in Melbourne
                                 </p>

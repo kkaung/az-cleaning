@@ -4,8 +4,9 @@ import { SlashIcon } from '@radix-ui/react-icons';
 import { absoluteUrl, cn, truncate } from '@/lib/utils';
 import Dot from '@/components/dot';
 import { BreadcrumbJsonLd } from 'next-seo';
+import { Icons } from '@/components/icons';
 
-interface BreadcrumbsProps {
+interface BreadcrumbsProps extends React.HTMLAttributes<HTMLElement> {
     segments: {
         title: string;
         href: string;
@@ -28,10 +29,15 @@ export function Breadcrumbs({
         <>
             <nav
                 aria-label="breadcrumbs"
-                className="flex items-center text-sm font-medium text-muted-foreground flex-wrap"
+                className={cn(
+                    'flex items-center text-sm font-medium text-muted-foreground flex-wrap',
+                    props.className
+                )}
             >
                 {segments.map((segment, index) => {
                     const isLastSegment = index === segments.length - 1;
+
+                    const isFirstSegment = index === 0;
 
                     if (isLastSegment)
                         return (
@@ -47,22 +53,37 @@ export function Breadcrumbs({
 
                     return (
                         <React.Fragment key={segment.href}>
-                            <Link
-                                aria-current={
-                                    isLastSegment ? 'page' : undefined
-                                }
-                                href={segment.href}
-                                className={cn(
-                                    'truncate transition-colors hover:text-foreground',
-                                    isLastSegment
-                                        ? 'text-foreground'
-                                        : 'text-muted-foreground'
-                                )}
-                            >
-                                {truncationLength > 0 && segment.title
-                                    ? truncate(segment.title, truncationLength)
-                                    : segment.title}
-                            </Link>
+                            {isFirstSegment ? (
+                                <Link
+                                    href="/"
+                                    title="End Of Lease Cleaning - Bond Cleaning"
+                                >
+                                    <Icons.home
+                                        aria-hidden
+                                        className="w-4 h-4"
+                                    />
+                                </Link>
+                            ) : (
+                                <Link
+                                    aria-current={
+                                        isLastSegment ? 'page' : undefined
+                                    }
+                                    href={segment.href}
+                                    className={cn(
+                                        'truncate transition-colors hover:text-foreground',
+                                        isLastSegment
+                                            ? 'text-foreground'
+                                            : 'text-muted-foreground'
+                                    )}
+                                >
+                                    {truncationLength > 0 && segment.title
+                                        ? truncate(
+                                              segment.title,
+                                              truncationLength
+                                          )
+                                        : segment.title}
+                                </Link>
+                            )}
                             {!isLastSegment && (
                                 <>
                                     {dottable ? (

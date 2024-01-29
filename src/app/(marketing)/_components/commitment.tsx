@@ -1,4 +1,5 @@
 import { headingVariants } from '@/components/page-header';
+import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import React, { type HTMLAttributes } from 'react';
@@ -13,7 +14,7 @@ export default function Commitment({ ...props }: CommitmentProps) {
             aria-labelledby="commitment-heading"
             className={cn(
                 props.className,
-                'p-12 space-y-8 bg-[#EEE6E0] md:text-center'
+                'p-12 space-y-8 bg-secondary md:text-center'
             )}
             {...props}
         >
@@ -25,6 +26,9 @@ export default function Commitment({ ...props }: CommitmentProps) {
             <p className="text-lg">
                 If you’re not happy with our work, we make it right!
             </p>
+            <Link href="/booking" className={cn(buttonVariants({}))}>
+                Book Now
+            </Link>
         </section>
     );
 }

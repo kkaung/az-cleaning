@@ -42,12 +42,7 @@ const SiteHeader = ({ ...props }: SiteHeaderProps) => {
                         >
                             Login
                         </Link>
-                        <Button
-                            variant="outline"
-                            className={cn(
-                                'rounded-full bg-primary/5 text-primary border-none transition-colors sm:flex hover:text-primary'
-                            )}
-                        >
+                        <Button variant="secondary">
                             <Icons.phone
                                 aria-hidden
                                 className="w-4 h-4 stroke-3 sm:mr-1"

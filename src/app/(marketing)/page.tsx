@@ -1,15 +1,13 @@
 import { Shell } from '@/components/shell';
-import { type Metadata } from 'next';
 import React from 'react';
 import { BreadcrumbJsonLd, OrganizationJsonLd } from 'next-seo';
+import { type Metadata } from 'next';
 
 import Hero from './_components/hero';
 import HowWork from './_components/how-work';
 import Services from './_components/services';
 import Reviews from './_components/reviews';
 import FAQs from './_components/faqs';
-import Checklist from './_components/checklist';
-import Suburbs from './_components/suburbs';
 import Features from './_components/features';
 import Gurantee from './_components/gurantee';
 import LatestBlog from './_components/latest-blog';
