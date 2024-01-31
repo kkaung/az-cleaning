@@ -15,7 +15,7 @@ const links = {
 export const siteConfig = {
     logo: 'AZCleaning',
     name: 'AZ Cleaning',
-    title: `Sydney's Premium House Cleaning Serivce`,
+    title: ``,
     description: '',
     url: 'https://rzcleaning.com.au',
     ogImage: 'https://rzcleaning.com.au/opengraph-image.png',
@@ -50,6 +50,10 @@ export const siteConfig = {
                     title: 'Bond Cleaning Perth',
                     href: '/bond-cleaning-perth',
                 },
+                {
+                    title: 'Bond Cleaning Adelaide',
+                    href: '/bond-cleaning-adelaide',
+                },
             ],
         },
         {
@@ -74,6 +78,10 @@ export const siteConfig = {
                 {
                     title: 'Vacate Cleaning Perth',
                     href: '/vacate-cleaning-perth',
+                },
+                {
+                    title: 'Vacate Cleaning Adelaide',
+                    href: '/vacate-cleaning-adelaide',
                 },
             ],
         },
