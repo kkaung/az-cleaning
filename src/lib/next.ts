@@ -1,6 +1,12 @@
 import { headers } from 'next/headers';
 import { toTitleCase } from './utils';
 
+export const getCity = () => {
+    const headersList = headers();
+
+    return headersList.get('x-vercel-ip-city') ?? '';
+};
+
 export const getPathname = () => {
     const _headers = headers();
 
@@ -16,7 +22,18 @@ export const getCityFromPath = () => {
 
     const pathSegments = pathname.split('/');
 
-    const cityName = toTitleCase(pathSegments[1].split('-').pop()!);
+    const splitted = pathSegments[1].split('-');
+
+    let cityName: string;
+
+    if (splitted[splitted.length - 2] !== 'cleaning') {
+        const firstName = splitted[splitted.length - 2];
+        const lastName = splitted[splitted.length - 1];
+
+        cityName = toTitleCase(firstName + ' ' + lastName);
+    } else {
+        cityName = toTitleCase(pathSegments[1].split('-').pop()!);
+    }
 
     return cityName !== undefined && cityName !== null && cityName !== ''
         ? cityName

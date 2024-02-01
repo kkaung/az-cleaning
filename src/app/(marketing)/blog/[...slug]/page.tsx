@@ -134,7 +134,7 @@ export default async function PostPage({ params }: PostPageProps) {
                                 <p className="font-semibold">
                                     by
                                     <Link
-                                        href={`/author/${author.slugAsParams}`}
+                                        href={`/authors/${author.slugAsParams}`}
                                         className="ml-1 hover:underline"
                                     >
                                         {author.title}

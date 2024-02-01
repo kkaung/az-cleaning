@@ -69,7 +69,7 @@ export default function Reviews({ ...props }: ReviewsProps) {
                 <div className="space-y-12">
                     <div className="space-y-4 md:text-center">
                         <h2 className={cn(headingVariants({}))}>
-                            <Balancer>What Customers Are Saying</Balancer>
+                            <Balancer>What Our Customers Are Saying</Balancer>
                         </h2>
                     </div>
                     <div className="space-y-5">

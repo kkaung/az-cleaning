@@ -22,6 +22,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         '',
         '/pricing',
         '/blog',
+        '/booking',
+        '/frequently-asked-questions',
+        '/bond-cleaning-checklist',
 
         '/bond-cleaning-canberra',
         '/bond-cleaning-brisbane',
@@ -31,6 +34,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         '/bond-cleaning-adelaide',
 
         '/vacate-cleaning-sydney',
+        '/vacate-cleaning-melbourne',
         '/vacate-cleaning-canberra',
         '/vacate-cleaning-brisbane',
         '/vacate-cleaning-canberra',

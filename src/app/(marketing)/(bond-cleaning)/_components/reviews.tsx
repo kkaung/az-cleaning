@@ -5,57 +5,66 @@ import { headingVariants } from '@/components/page-header';
 import { Icons } from '@/components/icons';
 import Marquee from '@/components/magicui/marquee';
 
-const reviews = [
-    {
-        name: 'Emily',
-        location: '',
-        body: 'RZ Cleaning Team did a great job on our apartment. Everything was spotless and we got 100% of our bond back. I would definitely recommend them for End of Lease cleaning.',
-    },
-    {
-        name: 'Dora',
-        body: 'Our Cleaners provided excellent cleaning for my end of lease. Reliable and friendly people. I would definitely reach out to them again!',
-    },
-    {
-        name: 'Durden',
-        body: 'I am very satisfied with the cleaning service. Brenda was extremely thorough, and my place is spotless! Highly recommend.',
-    },
-    {
-        name: 'Jessie W',
-        body: 'We booked the service for our end of lease cleaning and I couldn’t be happier. The flat is spotless and the service was amazing including the customer service before and after the cleaning. I will totally recommend RZ Cleaning.',
-    },
-    {
-        name: 'Kelly',
-        body: 'Vivi and the team arrived punctually, were very friendly, professional and did a great job. Highly recommend.',
-    },
-    {
-        name: 'Nick',
-        body: 'Very pleased with my end of lease clean from Angie and Yeimy. Great job and a reasonable price!',
-    },
-    {
-        name: 'John',
-        body: 'Amazing job unit was spotless really happy with the result would use for end of lease clean.',
-    },
-    {
-        name: 'Nicole',
-        body: 'Karen and Monica were booked at short notice to do our end-of-lease cleaning - they did a great job, would definitely recommend them!',
-    },
-    {
-        name: 'Melanie',
-        body: `I've used RZ Cleaning twice for lease end moving-out cleaning, and on both occasions they have been very open and communicative. The cleaning met all my expectations and would recommend them.`,
-    },
-    {
-        name: 'Sarah',
-        body: `Vivi and Robin did an amazing job cleaning the apartment for my end of lease. They were super helpful and responsive and sent a lot of photos after cleaning to ensure satisfaction.`,
-    },
-    {
-        name: 'Peter M',
-        body: `I have used many cleaning companies over the years and RZ Cleaning is the best I have found in Sydney.`,
-    },
-];
+const getReviews = (location: string) => {
+    return [
+        {
+            name: 'Emily',
+            body: 'RZ Cleaning Team did a great job on our apartment. Everything was spotless and we got 100% of our bond back. I would definitely recommend them for End of Lease cleaning.',
+        },
+        {
+            name: 'Dora',
+            body: 'Our Cleaners provided excellent cleaning for my end of lease. Reliable and friendly people. I would definitely reach out to them again!',
+        },
+        {
+            name: 'Durden',
+            body: 'I am very satisfied with the cleaning service. Brenda was extremely thorough, and my place is spotless! Highly recommend.',
+        },
+        {
+            name: 'Jessie W',
+            body: 'We booked the service for our end of lease cleaning and I couldn’t be happier. The flat is spotless and the service was amazing including the customer service before and after the cleaning. I will totally recommend RZ Cleaning.',
+        },
+        {
+            name: 'Kelly',
+            body: 'Vivi and the team arrived punctually, were very friendly, professional and did a great job. Highly recommend.',
+        },
+        {
+            name: 'Nick',
+            body: 'Very pleased with my end of lease clean from Angie and Yeimy. Great job and a reasonable price!',
+        },
+        {
+            name: 'John',
+            body: 'Amazing job unit was spotless really happy with the result would use for end of lease clean.',
+        },
+        {
+            name: 'Nicole',
+            body: 'Karen and Monica were booked at short notice to do our end-of-lease cleaning - they did a great job, would definitely recommend them!',
+        },
+        {
+            name: 'Melanie',
+            body: `I've used RZ Cleaning twice for bond cleaning, and on both occasions they have been very open and communicative. The cleaning met all my expectations and would recommend them.`,
+        },
+        {
+            name: 'Sarah',
+            body: `Vivi and Robin did an amazing job cleaning the apartment for my end of lease. They were super helpful and responsive and sent a lot of photos after cleaning to ensure satisfaction.`,
+        },
+        {
+            name: 'Peter M',
+            body: `I have used many cleaning companies over the years and RZ Cleaning is the best I have found in ${location} for exit clean.`,
+        },
+        {
+            name: 'Dean',
+            body: 'I am very satisfied with my exit cleaning service. Brenda was extremely thorough, and my place is spotless! Highly recommend.',
+        },
+    ];
+};
 
-interface ReviewsProps extends HTMLAttributes<HTMLElement> {}
+interface ReviewsProps extends HTMLAttributes<HTMLElement> {
+    location: string;
+}
 
-export default function Reviews({ ...props }: ReviewsProps) {
+export default function Reviews({ location, ...props }: ReviewsProps) {
+    const reviews = getReviews(location);
+
     return (
         <div style={{ width: '100%', overflowX: 'hidden' }}>
             <section
@@ -69,7 +78,7 @@ export default function Reviews({ ...props }: ReviewsProps) {
                 <div className="space-y-12">
                     <div className="space-y-4 md:text-center">
                         <h2 className={cn(headingVariants({}))}>
-                            <Balancer>What Customers Are Saying</Balancer>
+                            <Balancer>What Our Customers Are Saying</Balancer>
                         </h2>
                     </div>
                     <div className="space-y-5">

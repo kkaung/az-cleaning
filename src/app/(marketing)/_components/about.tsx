@@ -16,14 +16,14 @@ export default function About({ ...props }: AboutPropse) {
                 <p>
                     We are RZCleaning, Australia’s leading online platform for
                     matching customers up with the best end of lease, bond
-                    cleaners across Sydney and Melbourne.
+                    cleaners across major cities in Australia.
                 </p>
                 <p>
                     Founded in 2013, RZCleaning is committed to enhancing the
-                    cleaning experience in Sydney and Melbourne. We empower
-                    customers and cleaning professionals with a streamlined
-                    platform, making the entire process faster, smoother, and
-                    more straightforward.
+                    cleaning experience in Australia. We empower customers and
+                    cleaning professionals with a streamlined platform, making
+                    the entire process faster, smoother, and more
+                    straightforward.
                 </p>
             </div>
         </section>

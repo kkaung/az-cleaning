@@ -71,8 +71,11 @@ export default function Page({ params }: PageProps) {
                         {author.description}
                     </PageHeaderDescription>
                     <div>
-                        <Link href={author.linkin}>
-                            <Icons.linkin className="w-4 h-4" />
+                        <Link
+                            href={`https://www.linkedin.com/in/${author.linkin}`}
+                            target="_blank"
+                        >
+                            <Icons.linkin aria-hidden className="w-4 h-4" />
                         </Link>
                     </div>
                 </div>

@@ -10,11 +10,8 @@ interface SiteFooterProps extends HTMLAttributes<HTMLElement> {}
 
 export default async function SiteFooter({ ...props }: SiteFooterProps) {
     return (
-        <footer className="md:my-12">
-            <Shell
-                as="div"
-                className="mx-auto w-full max-w-7xl bg-secondary md:rounded-xl"
-            >
+        <footer className="border-t">
+            <Shell as="div">
                 <section
                     id="footer-content"
                     aria-labelledby="footer-content-heading"

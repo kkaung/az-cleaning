@@ -64,6 +64,10 @@ export const siteConfig = {
                     href: '/vacate-cleaning-sydney',
                 },
                 {
+                    title: 'Vacate Cleaning Melbourne',
+                    href: '/vacate-cleaning-melbourne',
+                },
+                {
                     title: 'Vacate Cleaning Brisbane',
                     href: '/vacate-cleaning-brisbane',
                 },
@@ -92,7 +96,7 @@ export const siteConfig = {
                 { title: 'About Us', href: '/about' },
                 { title: 'Blog', href: '/blog' },
                 { title: 'Pricing', href: '/pricing' },
-                { title: 'Checklist', href: '/checklist' },
+                { title: 'Checklist', href: '/bond-cleaning-checklist' },
                 { title: 'FAQs', href: '/frequently-asked-questions' },
                 { title: 'Privacy Policy', href: '/privacy' },
                 { title: 'Terms And Conditions', href: '/terms' },
@@ -103,7 +107,7 @@ export const siteConfig = {
         email: 'contact@azcleaning.com.au',
         phone: '1300 245 417',
         address: '7/24-26 Blaxland Road, Ryde, NSW 2112',
-        openingHour: 'Mon – Sat: 9:00 AM – 5:00 PM',
+        openingHour: 'Mon – Sun: 9:00 AM – 5:00 PM',
     },
     rating: {
         ratingValue: '4.9',

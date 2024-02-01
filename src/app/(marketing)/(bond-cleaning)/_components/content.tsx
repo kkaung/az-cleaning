@@ -24,10 +24,10 @@ export default function Content({ city, suburb, segments }: ContentProps) {
         <>
             <Shell>
                 <Hero location={city} />
-                <Reviews />
-                <HowWork />
-                <Features />
-                <Gurantee />
+                <Reviews location={city} />
+                <HowWork location={city} />
+                <Features location={city} />
+                <Gurantee location={city} />
                 <FAQs />
                 <About />
                 <LatestBlog />

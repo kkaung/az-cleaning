@@ -3,6 +3,7 @@ import {
     PageHeaderDescription,
     PageHeaderHeading,
 } from '@/components/page-header';
+import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 import { Shell } from '@/components/shell';
 import {
     Table,
@@ -69,6 +70,13 @@ const pricingList = [
 export default function Page() {
     return (
         <Shell>
+            <Breadcrumbs
+                segments={[
+                    { title: 'Home', href: '/' },
+                    { title: 'Pricing', href: '/pricing' },
+                ]}
+                dottable={false}
+            />
             <PageHeader className="text-center">
                 <PageHeaderHeading>End Of Lease Pricing</PageHeaderHeading>
                 <PageHeaderDescription className="mx-auto mt-6">
