@@ -5,9 +5,11 @@ import BookOnlieImage from '/public/assets/images/book-online.png';
 import WeCleanImage from '/public/assets/images/we-clean.png';
 import YouRelaxImage from '/public/assets/images/you-relax.png';
 
-interface HowWorkProps extends HTMLAttributes<HTMLElement> {}
+interface HowWorkProps extends HTMLAttributes<HTMLElement> {
+    location: string;
+}
 
-export default function HowWork({ ...props }: HowWorkProps) {
+export default function HowWork({ location, ...props }: HowWorkProps) {
     return (
         <section
             id="how-works"
@@ -34,7 +36,7 @@ export default function HowWork({ ...props }: HowWorkProps) {
                                 1. Book Online
                             </p>
                             <p>
-                                Book your Sydney end lease cleaning service
+                                Book your {location} vacate cleaning service
                                 online in 60 seconds.
                             </p>
                         </div>
@@ -52,8 +54,8 @@ export default function HowWork({ ...props }: HowWorkProps) {
                         <div className="space-y-3">
                             <p className="font-semibold text-lg">2. We Clean</p>
                             <p>
-                                Our end lease cleaners in Sydney will come over
-                                & professionally clean your home.
+                                Our bond cleaners in {location} will come over &
+                                professionally clean your home.
                             </p>
                         </div>
                     </div>

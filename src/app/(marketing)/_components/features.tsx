@@ -3,7 +3,9 @@ import { siteConfig } from '@/configs/site';
 import { cn } from '@/lib/utils';
 import React, { type HTMLAttributes } from 'react';
 
-interface FeaturesProps extends HTMLAttributes<HTMLElement> {}
+interface FeaturesProps extends HTMLAttributes<HTMLElement> {
+    
+}
 
 const items = [
     {
