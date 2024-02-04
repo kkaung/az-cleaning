@@ -158,17 +158,20 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                         </Link>
                         <Link
                             target="_blank"
-                            href="https://rzcleaning.com.au"
-                            title="RZ Cleaning - Bond Cleaning in Sydney"
+                            href={siteConfig.links.rzcleaning}
+                            title="RZ Cleaning - End Of Lease - Bond Cleaning Service in Sydney"
                         >
                             <Icons.sparkles aria-hidden className="h-4 w-4" />
                         </Link>
                         <Link
                             target="_blank"
-                            href="https://rzcleaning.com.au/bond-cleaning-sydney"
-                            title="BondToClean - Bond Cleaning in Sydney"
+                            href={siteConfig.links.bondtoclean}
+                            title="BondToClean - End Of Lease and Bond Cleaning Service in Australia"
                         >
-                            <Icons.sparkles aria-hidden className="h-4 w-4" />
+                            <Icons.personStanding
+                                aria-hidden
+                                className="h-4 w-4"
+                            />
                         </Link>
                     </div>
                 </section>

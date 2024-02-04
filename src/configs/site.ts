@@ -10,6 +10,9 @@ const links = {
     pinterest: 'https://pinterest.com/',
     linkin: 'https://linkin.com',
     youtube: 'https://youtube.com',
+
+    rzcleaning: 'https://rzcleaning.com.au',
+    bondtoclean: 'https://bondtoclean.com.au',
 };
 
 export const siteConfig = {
