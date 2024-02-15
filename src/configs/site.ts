@@ -24,6 +24,18 @@ export const siteConfig = {
     ogImage: 'https://rzcleaning.com.au/opengraph-image.png',
     mainNav: [
         {
+            title: 'Where We Clean',
+            items: [
+                { title: 'Sydney', href: '/bond-cleaning-sydney' },
+                { title: 'Melbourne', href: '/bond-cleaning-melbourne' },
+                { title: 'Brisbane', href: '/bond-cleaning-brisbane' },
+                { title: 'Perth', href: '/bond-cleaning-perth' },
+                { title: 'Adelaide', href: '/bond-cleaning-adelaide' },
+                { title: 'Canberra', href: '/bond-cleaning-canberra' },
+                { title: 'Gold Coast', href: '/bond-cleaning-gold-coast' },
+            ],
+        },
+        {
             title: 'Pricing',
             href: '/pricing',
         },
@@ -36,6 +48,10 @@ export const siteConfig = {
                 {
                     title: 'Bond Cleaning Sydney',
                     href: '/bond-cleaning-sydney',
+                },
+                {
+                    title: 'Bond Cleaning Melbourne',
+                    href: '/bond-cleaning-melbourne',
                 },
                 {
                     title: 'Bond Cleaning Brisbane',

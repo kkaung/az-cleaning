@@ -24,7 +24,7 @@ import { BlogTabs } from './_components/blog-tabs';
 export const runtime = 'edge';
 
 export const metadata: Metadata = {
-    title: '',
+    title: 'Blog',
     description: '',
 };
 
@@ -42,9 +42,6 @@ export default function Page() {
                 <PageHeaderHeading>
                     {siteConfig.name} House Cleaning Blog
                 </PageHeaderHeading>
-                <PageHeaderDescription size="sm" className="mx-auto">
-                    Simple solutions for a clean home.
-                </PageHeaderDescription>
             </PageHeader>
             <section className="mt-8 max-w-5xl w-full mx-auto">
                 <BlogTabs />

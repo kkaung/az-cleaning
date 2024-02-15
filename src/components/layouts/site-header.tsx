@@ -34,14 +34,6 @@ const SiteHeader = ({ ...props }: SiteHeaderProps) => {
                 <nav className="flex lg:flex-1 gap-4 items-center justify-between">
                     <MainNav items={siteConfig.mainNav} />
                     <div className="gap-3 flex items-center sm:gap-4 md:gap-6">
-                        <Link
-                            href="/"
-                            className={cn(
-                                'hidden text-foreground/60 hover:text-primary lg:block'
-                            )}
-                        >
-                            Login
-                        </Link>
                         <Button variant="secondary">
                             <Icons.phone
                                 aria-hidden

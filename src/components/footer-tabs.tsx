@@ -1,58 +1,131 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Tabs, TabsList, TabsTrigger } from './ui/tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { ScrollArea } from './ui/scroll-area';
-import { Separator } from './ui/separator';
 import { cn } from '@/lib/utils';
+import { locations } from '@/configs/location';
+import Link from 'next/link';
+import { Collapsible, CollapsibleTrigger } from './ui/collapsible';
 
 export default function FooterTabs() {
     const [tab, setTab] = useState(0);
+    const [isOpen, setIsOpen] = React.useState(false);
 
     const tabs = [
         {
-            title: '',
-            href: `/dashboard/stores`,
+            title: 'Sydney',
+            value: 'sydney',
         },
         {
-            title: '',
-            href: `/dashboard/stores`,
+            title: 'Melbourne',
+            value: 'melbourne',
         },
+        {
+            title: 'Brisbane',
+            value: 'brisbane',
+        },
+        {
+            title: 'Perth',
+            value: 'perth',
+        },
+        // {
+        //     title: 'Adelaide',
+        //     value: 'adelaide',
+        // },
+        // {
+        //     title: 'Gold Coast',
+        //     value: 'gold-coast',
+        // },
+        // {
+        //     title: 'Canberra',
+        //     value: 'canberra',
+        // },
     ];
 
     return (
-        <div>
+        <section>
             <Tabs
-                defaultValue={''}
-                className="sticky top-0 z-30 h-full w-full overflow-auto px-1"
+                defaultValue="sydney"
+                className="relative mt-6 w-full size-full overflow-auto"
             >
-                <ScrollArea className="pb-2.5" scrollBarClassName="h-2">
-                    <TabsList className="inline-flex items-center justify-center space-x-1.5 text-muted-foreground">
+                <ScrollArea
+                    orientation="horizontal"
+                    className="pb-2.5 w-full overflow-auto"
+                    scrollBarClassName="h-2"
+                >
+                    <TabsList className="w-full justify-start rounded-none border-b bg-transparent p-0 h-10">
                         {tabs.map(tab => (
                             <div
                                 role="none"
-                                key={tab.href}
-                                className={cn(
-                                    'border-b-2 border-transparent py-1.5'
-                                    // tab.isActive && 'border-foreground'
-                                )}
+                                key={tab.value}
+                                className={cn('border-b-2 border-transparent')}
                             >
                                 <TabsTrigger
-                                    value={tab.href}
+                                    value={tab.value}
                                     className={cn(
-                                        'inline-flex items-center justify-center rounded-sm px-3 py-1.5 text-sm font-medium text-muted-foreground ring-offset-background transition-all hover:bg-muted hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1'
-                                        // tab.isActive && 'text-foreground'
+                                        'relative h-10 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-4 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none'
                                     )}
-                                    asChild
                                 >
-                                    <>{tab.title}</>
+                                    {tab.title}
                                 </TabsTrigger>
                             </div>
                         ))}
                     </TabsList>
-                    <Separator />
                 </ScrollArea>
+                <div>
+                    {locations.map(l => (
+                        <TabsContent
+                            key={l.title}
+                            value={l.title.toLowerCase()}
+                        >
+                            <Collapsible open={isOpen} onOpenChange={setIsOpen}>
+                                <div
+                                    className={cn(
+                                        'relative h-[120px] overflow-hidden',
+                                        {
+                                            'h-full': isOpen,
+                                        }
+                                    )}
+                                >
+                                    <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6">
+                                        {l.items.map(i => (
+                                            <li key={i.title}>
+                                                <Link
+                                                    href={`/bond-cleaning-${l.title.toLowerCase()}/${
+                                                        i.slug
+                                                    }`}
+                                                    title={`End of Lease Cleaning - Bond Cleaning ${i.title}`}
+                                                    className="text-sm text-muted-foreground"
+                                                >
+                                                    {i.title}
+                                                </Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    <div
+                                        className={cn(
+                                            'absolute z-10 bottom-0 inset-x-0 h-24 bg-gradient-to-t from-background via-background/80 translate-y-1',
+                                            {
+                                                'from-transparent via-transparent h-0 -z-10':
+                                                    isOpen,
+                                            }
+                                        )}
+                                    />
+                                </div>
+                                <div className="text-center py-6">
+                                    <CollapsibleTrigger>
+                                        <div className="font-medium text-sm">
+                                            {isOpen ? 'View Less' : 'View More'}
+                                        </div>
+                                        <span className="sr-only">Toggle</span>
+                                    </CollapsibleTrigger>
+                                </div>
+                            </Collapsible>
+                        </TabsContent>
+                    ))}
+                </div>
             </Tabs>
-        </div>
+        </section>
     );
 }

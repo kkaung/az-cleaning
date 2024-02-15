@@ -86,6 +86,7 @@ const config = {
     plugins: [
         require('tailwindcss-animate'),
         require('@headlessui/tailwindcss'),
+        require('@tailwindcss/typography'),
     ],
 } satisfies Config;
 
