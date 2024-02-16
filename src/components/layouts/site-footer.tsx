@@ -176,6 +176,13 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                                 className="h-4 w-4"
                             />
                         </Link>
+                        <Link
+                            target="_blank"
+                            href={siteConfig.links.bondcleaningsydney}
+                            title="Best End Of Lease Cleaning In Sydney"
+                        >
+                            <Icons.sticker aria-hidden className="h-4 w-4" />
+                        </Link>
                     </div>
                 </section>
             </Shell>

@@ -1,7 +1,6 @@
 import { type MetadataRoute } from 'next';
 import { absoluteUrl } from '@/lib/utils';
 import { allPosts, allPages, allAuthors } from 'contentlayer/generated';
-import { locations } from '@/configs/location';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const pagesRoutes = allPages.map(page => ({

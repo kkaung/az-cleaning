@@ -13,6 +13,8 @@ const links = {
 
     rzcleaning: 'https://rzcleaning.com.au',
     bondtoclean: 'https://bondtoclean.com.au',
+    bondcleaningsydney:
+        'https://end-of-lease-bond-vacate-cleaning-sydney.com.au',
 };
 
 export const siteConfig = {

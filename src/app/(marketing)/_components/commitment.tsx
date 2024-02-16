@@ -14,7 +14,7 @@ export default function Commitment({ ...props }: CommitmentProps) {
             aria-labelledby="commitment-heading"
             className={cn(
                 props.className,
-                'p-12 space-y-8 bg-secondary md:text-center'
+                'p-12 space-y-8 bg-secondary rounded-lg md:text-center'
             )}
             {...props}
         >

@@ -9,7 +9,10 @@ export default function About({ ...props }: AboutPropse) {
         <section
             id="about"
             aria-labelledby="about-heading"
-            className={cn(props.className, 'p-12 space-y-12 bg-secondary')}
+            className={cn(
+                props.className,
+                'p-12 space-y-12 bg-secondary rounded-lg'
+            )}
         >
             <h3 className={cn(headingVariants({}))}>About {siteConfig.name}</h3>
             <div className="space-y-6">

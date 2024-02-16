@@ -15,7 +15,7 @@ export default function Gurantee({ ...props }: GuranteeProps) {
             aria-labelledby="gurantee-heading"
             className={cn(
                 props.className,
-                'p-12 bg-secondary flex flex-col max-h-[500px] items-center gap-12 md:flex-row'
+                'p-12 bg-secondary flex flex-col max-h-[500px] items-center gap-12 rounded-lg md:flex-row'
             )}
         >
             <Image
