@@ -16,14 +16,10 @@ export const metadata: Metadata = {
     alternates: {
         canonical: '/',
     },
-    title: {
-        default: siteConfig.title,
-        template: `%s - ${siteConfig.name}`,
-    },
     description: siteConfig.description,
     keywords: [],
     authors: [],
-    creator: 'azcleaning_au',
+    creator: 'azcleaning',
     openGraph: {
         type: 'website',
         locale: 'en_US',
@@ -37,7 +33,7 @@ export const metadata: Metadata = {
         title: siteConfig.name,
         description: siteConfig.description,
         images: [`${siteConfig.url}/og.jpg`],
-        creator: '@azcleaning_au',
+        creator: '@azcleaning',
     },
     icons: {
         icon: '/favicon.ico',

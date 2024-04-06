@@ -26,14 +26,10 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                         <Link
                             aria-label="Home"
                             href="/"
-                            className="text-2xl italic flex items-center space-x-2"
+                            className="text-2xl italic flex items-center space-x-2 font-bold"
                         >
-                            <span className="font-bold">{siteConfig.logo}</span>
+                            {siteConfig.name}
                         </Link>
-                        <p className="my-4 max-w-xs text-xs md:text-sm">
-                            You move out, we handle the meticulous cleanup with
-                            care.
-                        </p>
                         <div className="flex flex-col mt-2 space-y-2">
                             <div className={cn('cursor-pointer text-sm')}>
                                 <Icons.mail
@@ -98,9 +94,6 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                         ))}
                     </section>
                 </section>
-                <Separator />
-                <FooterTabs />
-                <Separator />
                 <section
                     id="footer-bottom"
                     aria-labelledby="footer-bottom-heading"
@@ -120,30 +113,6 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                             <Icons.facebook aria-hidden className="h-4 w-4" />
                         </Link>
                         <Link
-                            aria-label="Instagram"
-                            target="_blank"
-                            href={siteConfig.links.instagram}
-                            rel="nofollow"
-                        >
-                            <Icons.instagram aria-hidden className="h-4 w-4" />
-                        </Link>
-                        <Link
-                            aria-label="Twitter"
-                            target="_blank"
-                            href={siteConfig.links.twitter}
-                            rel="nofollow"
-                        >
-                            <Icons.twitter aria-hidden className="h-4 w-4" />
-                        </Link>
-                        <Link
-                            aria-label="Youtube"
-                            target="_blank"
-                            href={siteConfig.links.youtube}
-                            rel="nofollow"
-                        >
-                            <Icons.youtube aria-hidden className="h-4 w-4" />
-                        </Link>
-                        <Link
                             aria-label="Linkin"
                             target="_blank"
                             href={siteConfig.links.linkin}
@@ -158,30 +127,6 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                             rel="nofollow"
                         >
                             <Icons.pinterest aria-hidden className="h-4 w-4" />
-                        </Link>
-                        <Link
-                            target="_blank"
-                            href={siteConfig.links.rzcleaning}
-                            title="RZ Cleaning - End Of Lease - Bond Cleaning Service in Sydney"
-                        >
-                            <Icons.sparkles aria-hidden className="h-4 w-4" />
-                        </Link>
-                        <Link
-                            target="_blank"
-                            href={siteConfig.links.bondtoclean}
-                            title="BondToClean - End Of Lease and Bond Cleaning Service in Australia"
-                        >
-                            <Icons.personStanding
-                                aria-hidden
-                                className="h-4 w-4"
-                            />
-                        </Link>
-                        <Link
-                            target="_blank"
-                            href={siteConfig.links.bondcleaningsydney}
-                            title="Best End Of Lease Cleaning In Sydney"
-                        >
-                            <Icons.sticker aria-hidden className="h-4 w-4" />
                         </Link>
                     </div>
                 </section>

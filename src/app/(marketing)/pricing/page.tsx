@@ -5,6 +5,7 @@ import {
 } from '@/components/page-header';
 import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 import { Shell } from '@/components/shell';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import {
     Table,
     TableBody,
@@ -16,7 +17,7 @@ import {
     TableRow,
 } from '@/components/ui/table';
 import { siteConfig } from '@/configs/site';
-import { getPathname } from '@/lib/next';
+import { formatDate } from '@/lib/utils';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import React from 'react';
@@ -24,14 +25,11 @@ import React from 'react';
 export const runtime = 'edge';
 
 export async function generateMetadata(): Promise<Metadata> {
-    const pathname = getPathname();
-
     return {
-        title: 'End Of Lease - Bond Cleaning Pricing ',
-        description:
-            'Check our detailed cleaning pricing list. Professional & reliable service, 100% satisfaction guarantee. Book online in 60 seconds.',
+        title: 'House Cleaning Prices In Geelong',
+        description: `Get crystal clear pricing on Geelong's top-rated house cleaning services. Find the perfect fit for your budget and needs, with options from weekly refreshes to deep dives.`,
         alternates: {
-            canonical: pathname,
+            canonical: '/pricing',
         },
     };
 }
@@ -69,7 +67,7 @@ const pricingList = [
 
 export default function Page() {
     return (
-        <Shell>
+        <Shell as="article">
             <Breadcrumbs
                 segments={[
                     { title: 'Home', href: '/' },
@@ -78,19 +76,45 @@ export default function Page() {
                 dottable={false}
             />
             <PageHeader className="text-center">
-                <PageHeaderHeading>End Of Lease Pricing</PageHeaderHeading>
-                <PageHeaderDescription className="mx-auto mt-6">
-                    You might recognise it as bond cleaning, end of lease
-                    cleaning, or vacate cleaning. It’s all one and the same for
-                    us. See below a detailed list of our end of cleaning service
-                    prices. At
-                    <Link href="/" className="underline mx-1">
-                        {siteConfig.name}
-                    </Link>
-                    , our prices are super affordable and will not break the
-                    bank.
+                <PageHeaderHeading>
+                    House Cleaning Pricing In Geelong
+                </PageHeaderHeading>
+                <PageHeaderDescription className="mx-auto">
+                    <time
+                        dateTime={'2024-01-04T00:00:00.000Z'}
+                        className="block text-sm text-muted-foreground mb-2"
+                    >
+                        Updated on {formatDate('2024-01-04T00:00:00.000Z')}
+                    </time>
                 </PageHeaderDescription>
             </PageHeader>
+            <div className="mx-auto prose prose-quoteless prose-neutral dark:prose-invert">
+                <p>
+                    Coast Maid provides a range of high-quality cleaning
+                    services, from house cleaning to{' '}
+                    <Link href="/office-cleaning-wollongong">
+                        office cleaning
+                    </Link>
+                    ,{' '}
+                    <Link href="/bond-cleaning-wollongong">
+                        end of lease cleaning
+                    </Link>{' '}
+                    and{' '}
+                    <Link href="/carpet-cleaning-wollongong">
+                        carpet cleaning
+                    </Link>
+                    . We cater to homes throughout Gold Coast, offering
+                    top-notch cleaning solutions at affordable prices, ensuring
+                    accessibility to the best cleaners in the city for all.
+                </p>
+                <p>
+                    This guide unveils the secrets to sparkling spaces without
+                    the shocking bill. From hourly rates to flat fees, discover
+                    the perfect cleaning solution for your home and budget.
+                    Breathe easy knowing you&apos;re getting expert service
+                    without the stress of hidden fees.
+                </p>
+            </div>
             <section className="broder max-w-xl mx-auto w-full">
                 <Table>
                     <TableCaption>A list of cleaning prices.</TableCaption>
@@ -113,6 +137,25 @@ export default function Page() {
                         ))}
                     </TableBody>
                 </Table>
+            </section>
+            <section className="my-8 max-w-xl mx-auto">
+                <Card className="border-0 bg-secondary/50 rounded-xl">
+                    <CardHeader>
+                        <div className="flex gap-4">
+                            <div className="font-semibold">
+                                <Link
+                                    href="/"
+                                    className="relative text-primary hover:underline"
+                                >
+                                    {siteConfig.name}
+                                </Link>
+                            </div>
+                        </div>
+                    </CardHeader>
+                    <CardContent className="space-y-4 text-foreground">
+                        <div className="flex gap-4"></div>
+                    </CardContent>
+                </Card>
             </section>
         </Shell>
     );

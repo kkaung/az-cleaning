@@ -2,9 +2,9 @@ import { Icons } from '@/components/icons';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import React, { type HTMLAttributes } from 'react';
-import { descriptionVariants, headingVariants } from '@/components/page-header';
+import { headingVariants } from '@/components/page-header';
 import AccordionList from '@/components/accordion-list';
-import { FAQPageJsonLd } from 'next-seo';
+import { siteConfig } from '@/configs/site';
 
 const getFAQs = (location?: string) => {
     return [
@@ -18,11 +18,7 @@ const getFAQs = (location?: string) => {
         },
         {
             question: 'Are your cleaning teams professionals insured?',
-            answer: ``,
-        },
-        {
-            question: 'Are your cleaning teams prefessionals?',
-            answer: ``,
+            answer: 'Every member of our exceptional cleaning team is fully insured, safeguarding you and your property while delivering unparalleled cleaning solutions.',
         },
         {
             question: 'How many your cleaners will come to clean my house?',
@@ -30,15 +26,15 @@ const getFAQs = (location?: string) => {
         },
         {
             question: 'Are cleaning supplies provided?',
-            answer: '',
+            answer: `Yes, ${siteConfig.name}'s professional teams provide all necessary cleaning supplies and equipment for a seamless and hassle-free experience.`,
         },
         {
             question: 'Are your cleaning supplies safe for children and pets?',
-            answer: '',
+            answer: `Absolutely, ${siteConfig.name} prioritizes safety by using eco-friendly, non-toxic cleaning supplies that are gentle and safe for children and pets.`,
         },
         {
             question: 'Do I have to be home for my house cleaning service?',
-            answer: '',
+            answer: `No, you don't need to be present; ${siteConfig.name}'s trusted professionals can clean your home while you're away.`,
         },
         {
             question:
@@ -48,14 +44,6 @@ const getFAQs = (location?: string) => {
         {
             question: 'Can I get a same-day booking?',
             answer: 'No assurance for same-day bookings, but we often meet the request depending on the day.',
-        },
-        {
-            question: 'Can I get a receipt to show my real estate agent?',
-            answer: 'Absolutely. Once your cleaning service has been completed and your card has been charged, a service receipt will automatically be emailed to you.',
-        },
-        {
-            question: 'Do you provide urgent end of lease cleans?',
-            answer: '',
         },
         {
             question: `What is your cancellation policy?`,
@@ -104,7 +92,6 @@ export default function FAQs({ location = 'Sydney', ...props }: FAQsProps) {
                     </div>
                 </div>
             </section>
-            <FAQPageJsonLd useAppDir mainEntity={faqs} />
         </>
     );
 }

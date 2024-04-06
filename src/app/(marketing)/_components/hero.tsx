@@ -1,184 +1,109 @@
 'use client';
 
-import Dot from '@/components/dot';
 import { Icons } from '@/components/icons';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { buttonVariants } from '@/components/ui/button';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-} from '@/components/ui/carousel';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import React, { type HTMLAttributes } from 'react';
-import Balancer from 'react-wrap-balancer';
+import {
+    PageHeader,
+    PageHeaderDescription,
+    PageHeaderHeading,
+} from '@/components/page-header';
 import Image from 'next/image';
-import HeroOneImage from '/public/assets/images/hero-one.jpeg';
-import HeroTwoImage from '/public/assets/images/hero-two.jpeg';
-import HeroThreeImage from '/public/assets/images/hero-three.jpeg';
-import Autoplay from 'embla-carousel-autoplay';
-import { siteConfig } from '@/configs/site';
+import AvatarOne from '/public/avatars/avatar-01.png';
+import AvatarTwo from '/public/avatars/avatar-02.png';
+import AvatarThree from '/public/avatars/avatar-03.png';
+import AvatarFour from '/public/avatars/avatar-04.jpg';
+import AvatarFive from '/public/avatars/avatar-05.jpg';
+import AvatarSix from '/public/avatars/avatar-06.jpeg';
 
 interface HeroProps extends HTMLAttributes<HTMLElement> {}
 
 export default function Hero({ ...props }: HeroProps) {
+    const avatars = [
+        { name: '', image: AvatarOne },
+        { name: '', image: AvatarTwo },
+        { name: '', image: AvatarThree },
+        { name: '', image: AvatarFour },
+        { name: '', image: AvatarFive },
+        { name: '', image: AvatarSix },
+    ];
+
     return (
         <section
             id="hero"
             aria-labelledby="hero-headings"
-            className={cn(
-                props.className,
-                'grid grid-cols-1 gap-6 items-center md:grid-cols-2 md:gap-8'
-            )}
+            className={cn(props.className, 'py-12 text-center')}
         >
-            <div className="order-2 md:order-1">
-                <Card className="max-w-lg shadow-none border-none md:shadow-lg md:rounded-xl">
-                    <CardHeader className="py-6 pt-0 px-0 md:p-6 md:pb-0 md:pt-6">
-                        <h1 className="font-extrabold text-4xl leading-none">
-                            <Balancer>
-                                Melbourne&apos;s Favourite <br /> End Of Lease
-                                Cleaning Service
-                            </Balancer>
-                        </h1>
-                    </CardHeader>
-                    <CardContent className="space-y-8 p-0 md:p-6">
-                        <p className="text-muted-foreground text-base">
-                            Lowest Price Guarantee Bond Cleaning Service —
-                            trusted by thousands of customers across Melbourne.
-                            Secure the return of your security bond with our
-                            thorough bond cleaning service.
-                        </p>
-                        <div className="space-y-3 leading-tight">
-                            <div className="flex items-center">
-                                <Icons.check
-                                    className="w-4 h-4 mr-2"
-                                    aria-hidden
-                                    strokeWidth={3}
-                                />
-                                <p>Vetted & Trusted Bond Cleaners</p>
-                            </div>
-                            <div className="flex items-center">
-                                <Icons.check
-                                    className="w-4 h-4 mr-2"
-                                    aria-hidden
-                                    strokeWidth={3}
-                                />
-                                <p>100% Bond Back Guarantee</p>
-                            </div>
-                            <div className="flex items-center">
-                                <Icons.check
-                                    className="w-4 h-4 mr-2"
-                                    aria-hidden
-                                    strokeWidth={3}
-                                />
-                                <p>Transparent pricing, no hidden fees</p>
-                            </div>
-                            <div className="flex items-center">
-                                <Icons.check
-                                    className="w-4 h-4 mr-2"
-                                    aria-hidden
-                                    strokeWidth={3}
-                                />
-                                <p>
-                                    Trusted by 1000+ monthly movers in Melbourne
-                                </p>
-                            </div>
-                        </div>
-                        <div className="flex gap-1 items-center text-sm">
-                            <Icons.starFull className="w-4 h-4 text-pink-500" />
-                            <span className="font-semibold">
-                                {siteConfig.rating.ratingValue}
-                            </span>
-                            <Dot />
-                            <span className="text-muted-foreground underline">
-                                {siteConfig.rating.ratingCount} reviews
-                            </span>
-                        </div>
-                        <div className="flex flex-col text-center">
-                            <Link
-                                href="/booking"
-                                className={cn(
-                                    buttonVariants({ size: 'lg' }),
-                                    'font-semibold'
-                                )}
-                            >
-                                Get An Instant Quote
-                            </Link>
-                            <div className="text-sm mt-2 itali px-4">
-                                It takes only 60 seconds
-                            </div>
-                        </div>
-                    </CardContent>
-                </Card>
-            </div>
-            <div className="order-1 md:order-2">
-                <Carousel
-                    className="w-full"
-                    plugins={[
-                        Autoplay({
-                            delay: 5000,
-                        }),
-                    ]}
-                    opts={{
-                        loop: true,
-                    }}
-                >
-                    <CarouselContent>
-                        <CarouselItem>
-                            <div className="p-1">
-                                <div className="overflow-hidden rounded-xl">
-                                    <AspectRatio
-                                        ratio={16 / 9}
-                                        className="bg-secondary"
-                                    >
-                                        <Image
-                                            fill
-                                            src={HeroOneImage}
-                                            alt="End Of Lease Cleaner"
-                                            className="object-top object-cover bg-no-repeat"
-                                        />
-                                    </AspectRatio>
-                                </div>
-                            </div>
-                        </CarouselItem>
-                        <CarouselItem>
-                            <div className="p-1">
-                                <div className="overflow-hidden rounded-xl">
-                                    <AspectRatio
-                                        ratio={16 / 9}
-                                        className="bg-secondary"
-                                    >
-                                        <Image
-                                            fill
-                                            src={HeroTwoImage}
-                                            alt="Moving Out Cleaner"
-                                            className="object-top object-cover bg-no-repeat"
-                                        />
-                                    </AspectRatio>
-                                </div>
-                            </div>
-                        </CarouselItem>
-                        <CarouselItem>
-                            <div className="p-1">
-                                <div className="overflow-hidden rounded-xl">
-                                    <AspectRatio
-                                        ratio={16 / 9}
-                                        className="bg-secondary"
-                                    >
-                                        <Image
-                                            fill
-                                            src={HeroThreeImage}
-                                            alt="Vacate Cleaner"
-                                            className="object-top object-cover bg-no-repeat"
-                                        />
-                                    </AspectRatio>
-                                </div>
-                            </div>
-                        </CarouselItem>
-                    </CarouselContent>
-                </Carousel>
+            <PageHeader className="mx-auto text-center space-y-6">
+                <PageHeaderHeading>
+                    Wollongong&apos;s Most In Demand Cleaning Company
+                </PageHeaderHeading>
+                <PageHeaderDescription className="mx-auto">
+                    Say goodbye to grease and grime with our thorough cleaning
+                    service.
+                </PageHeaderDescription>
+            </PageHeader>
+            <ul className="mx-auto gird text-center space-y-2 mt-6 font-semibold">
+                <li>
+                    <Icons.check
+                        className="text-green-500 mr-1 inline w-5 h-5"
+                        aria-hidden="true"
+                    />
+                    Trusted Cleaning Service
+                </li>
+                <li>
+                    <Icons.check
+                        className="text-green-500 mr-1 inline w-5 h-5"
+                        aria-hidden="true"
+                    />
+                    200% Guarantee
+                </li>
+                <li>
+                    <Icons.check
+                        className="text-green-500 mr-1 inline w-5 h-5"
+                        aria-hidden="true"
+                    />
+                    5-Star Rated Service
+                </li>
+            </ul>
+            <Link
+                href="/booking"
+                className={cn(
+                    'w-52',
+                    'font-semibold mt-12',
+                    buttonVariants({ size: 'lg' })
+                )}
+            >
+                <Icons.sparkles className="w-4 h-4 mr-2" /> Book Now
+            </Link>
+            <div className="flex flex-col items-center justify-center  gap-4 mt-12 sm:flex-row">
+                <div className="flex items-center -space-x-2">
+                    {avatars.map(avatar => (
+                        <Image
+                            key={avatar.name}
+                            src={avatar.image}
+                            width={40}
+                            height={40}
+                            alt={`${avatar.name} avatar`}
+                            className="rounded-full object-cover object-center bg-cover border-2 border-white"
+                        />
+                    ))}
+                </div>
+                <div>
+                    <div className="flex items-center justify-center sm:justify-start">
+                        {Array.from({ length: 5 }, (_, idx) => (
+                            <Icons.starFull
+                                key={idx}
+                                className="w-5 h-5 text-yellow-400"
+                            />
+                        ))}
+                    </div>
+                    <p className="text-sm font-semibold">
+                        Trusted by 1000+ families in Wollongong
+                    </p>
+                </div>
             </div>
         </section>
     );
