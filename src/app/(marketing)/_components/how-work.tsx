@@ -12,7 +12,7 @@ export default function HowWork({ ...props }: HowWorkProps) {
         {
             title: 'We Clean',
             description:
-                'Our expert cleaners in Newcastle will come over & professionally clean your home.',
+                'Our expert cleaners in Geelong will come over & professionally clean your home.',
         },
         {
             title: 'You Relax',

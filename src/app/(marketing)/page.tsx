@@ -11,8 +11,9 @@ import FAQs from './_components/faqs';
 export const runtime = 'edge';
 
 export const metadata: Metadata = {
-    title: `#1 Cleaning Service in Wollongong - Cleaner Wollongong`,
-    description: '',
+    title: `#1 Cleaning Service in Geelong - Cleaner Geelong`,
+    description:
+        'Expert cleaning services in Geelong. We provides top-rated house and office cleaning. Insured, reliable, and affordable. Book online today!',
 };
 
 export default function Page() {
@@ -20,7 +21,7 @@ export default function Page() {
         <Shell>
             <Hero />
             <HowWork />
-            <Features location="Wollongong" />
+            <Features location="Geelong" />
             <WhyUs />
             <FAQs />
         </Shell>

@@ -32,8 +32,8 @@ const items = [
         content: `Trust our expert customer service team for comprehensive support from inquiry to post-service, ensuring your satisfaction at every stage.`,
     },
     {
-        title: 'Across Wollongong',
-        content: `We’ve got insured & vetted airbnb cleaners across Wollongong, ready to help get you in getting your airbnb house sparkling clean.`,
+        title: 'Across Geelong',
+        content: `We’ve got insured & vetted cleaners across Geelong, ready to help get you in getting your house sparkling clean.`,
     },
     {
         title: 'No Hidden Fees',
