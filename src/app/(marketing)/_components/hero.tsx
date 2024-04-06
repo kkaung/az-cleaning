@@ -38,7 +38,7 @@ export default function Hero({ ...props }: HeroProps) {
         >
             <PageHeader className="mx-auto text-center space-y-6">
                 <PageHeaderHeading>
-                    Wollongong&apos;s Most In Demand Cleaning Company
+                    Geelong&apos;s Most In Demand Cleaning Company
                 </PageHeaderHeading>
                 <PageHeaderDescription className="mx-auto">
                     Say goodbye to grease and grime with our thorough cleaning

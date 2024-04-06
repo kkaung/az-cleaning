@@ -4,8 +4,6 @@ import { Shell } from '@/components/shell';
 import { Icons } from '@/components/icons';
 import { cn } from '@/lib/utils';
 import { type HTMLAttributes } from 'react';
-import { Separator } from '@/components/ui/separator';
-import FooterTabs from '../footer-tabs';
 
 interface SiteFooterProps extends HTMLAttributes<HTMLElement> {}
 
@@ -13,12 +11,12 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
     return (
         <footer className="border-t">
             <Shell as="div">
-                <section
+                <div
                     id="footer-content"
                     aria-labelledby="footer-content-heading"
                     className="flex flex-col gap-6 lg:flex-row lg:gap-8"
                 >
-                    <section
+                    <div
                         id="footer-branding"
                         aria-labelledby="footer-branding-heading"
                         className="w-full lg:max-w-sm"
@@ -65,9 +63,12 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                                 </span>
                                 {siteConfig.business.openingHour}
                             </div>
+                            <div className="text-muted-foreground">
+                                <Link href="/">{siteConfig.domain}</Link>
+                            </div>
                         </div>
-                    </section>
-                    <section
+                    </div>
+                    <div
                         id="footer-links"
                         aria-labelledby="footer-links-heading"
                         className="grid flex-1 grid-cols-1 gap-10 xs:grid-cols-2 sm:grid-cols-3"
@@ -77,24 +78,23 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                                 <h4 className="text-base font-medium">
                                     {item.title}
                                 </h4>
-                                <ul className="space-y-2">
+                                <nav className="space-y-2">
                                     {item.items.map(link => (
-                                        <li key={link.title}>
-                                            <Link
-                                                href={link.href}
-                                                className="text-sm transition-colors line-clamp-1"
-                                                title={link.title}
-                                            >
-                                                {link.title}
-                                            </Link>
-                                        </li>
+                                        <Link
+                                            key={link.title}
+                                            href={link.href}
+                                            className="text-sm transition-colors line-clamp-1"
+                                            title={link.title}
+                                        >
+                                            {link.title}
+                                        </Link>
                                     ))}
-                                </ul>
+                                </nav>
                             </div>
                         ))}
-                    </section>
-                </section>
-                <section
+                    </div>
+                </div>
+                <div
                     id="footer-bottom"
                     aria-labelledby="footer-bottom-heading"
                     className="flex flex-col space-x-3 sm:flex-row sm:items-center"
@@ -129,7 +129,7 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                             <Icons.pinterest aria-hidden className="h-4 w-4" />
                         </Link>
                     </div>
-                </section>
+                </div>
             </Shell>
         </footer>
     );

@@ -13,7 +13,9 @@ export const siteConfig = {
     logo: 'AZCleaning',
     name: 'AZ Cleaning Geelong',
     title: 'AZ Cleaning Geelong',
-    description: '',
+    domain: 'azcleaning.com.au',
+    description:
+        'Expert cleaning services in Geelong. We provides top-rated house and office cleaning. Insured, reliable, and affordable. Book online today!',
     url: 'https://azcleaning.com.au',
     ogImage: 'https://azcleaning.com.au/opengraph-image.png',
     mainNav: [

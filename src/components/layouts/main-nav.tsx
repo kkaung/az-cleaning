@@ -23,7 +23,10 @@ export default function MainNav({ items }: MainNavProps) {
     const segment = useSelectedLayoutSegment();
 
     return (
-        <div className="hidden gap-6 z-30 lg:flex">
+        <div className="hidden gap-6 z-30 lg:flex lg:items-center">
+            <Link href="/" className="text-muted-foreground">
+                Cleaner Geelong
+            </Link>
             <NavigationMenu>
                 <NavigationMenuList>
                     {items?.map(item =>
