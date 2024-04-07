@@ -21,13 +21,21 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                         aria-labelledby="footer-branding-heading"
                         className="w-full lg:max-w-sm"
                     >
-                        <Link
-                            aria-label="Home"
-                            href="/"
-                            className="text-2xl italic flex items-center space-x-2 font-bold"
-                        >
-                            {siteConfig.name}
-                        </Link>
+                        <div>
+                            <Link
+                                aria-label="Home"
+                                href="/"
+                                className="text-2xl italic flex items-center space-x-2 font-bold"
+                            >
+                                {siteConfig.name}
+                            </Link>
+                            <Link
+                                href="/"
+                                className="font-medium italic hover:underline"
+                            >
+                                Cleaner Near Me
+                            </Link>
+                        </div>
                         <div className="flex flex-col mt-2 space-y-2">
                             <div className={cn('cursor-pointer text-sm')}>
                                 <Icons.mail

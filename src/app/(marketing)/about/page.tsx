@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: `About Us - ${siteConfig.name}`,
     description: `Join us on our journey to revolutionize the cleaning industry! Get acquainted with our dedicated field and office staff members, and learn about the inception of ${siteConfig.name}.`,
     alternates: {
-        canonical: '/about-us',
+        canonical: '/about',
     },
 };
 

@@ -22,12 +22,12 @@ interface HeroProps extends HTMLAttributes<HTMLElement> {}
 
 export default function Hero({ ...props }: HeroProps) {
     const avatars = [
-        { name: '', image: AvatarOne },
-        { name: '', image: AvatarTwo },
-        { name: '', image: AvatarThree },
-        { name: '', image: AvatarFour },
-        { name: '', image: AvatarFive },
-        { name: '', image: AvatarSix },
+        { name: 'Toni', image: AvatarOne },
+        { name: 'Ashly', image: AvatarTwo },
+        { name: 'Kelvin', image: AvatarThree },
+        { name: 'Rose', image: AvatarFour },
+        { name: 'Sarah', image: AvatarFive },
+        { name: 'Lilly', image: AvatarSix },
     ];
 
     return (
@@ -101,7 +101,7 @@ export default function Hero({ ...props }: HeroProps) {
                         ))}
                     </div>
                     <p className="text-sm font-semibold">
-                        Trusted by 1000+ families in Wollongong
+                        Trusted by 1000+ families in Geelong
                     </p>
                 </div>
             </div>
