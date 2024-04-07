@@ -92,17 +92,13 @@ export default function Page() {
                 <p>
                     Coast Maid provides a range of high-quality cleaning
                     services, from house cleaning to{' '}
-                    <Link href="/office-cleaning-wollongong">
-                        office cleaning
-                    </Link>
+                    <Link href="/office-cleaning-geelong">office cleaning</Link>
                     ,{' '}
-                    <Link href="/bond-cleaning-wollongong">
+                    <Link href="/bond-cleaning-geelong">
                         end of lease cleaning
                     </Link>{' '}
                     and{' '}
-                    <Link href="/carpet-cleaning-wollongong">
-                        carpet cleaning
-                    </Link>
+                    <Link href="/carpet-cleaning-geelong">carpet cleaning</Link>
                     . We cater to homes throughout Gold Coast, offering
                     top-notch cleaning solutions at affordable prices, ensuring
                     accessibility to the best cleaners in the city for all.

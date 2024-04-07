@@ -1,6 +1,6 @@
 import { type MetadataRoute } from 'next';
 import { absoluteUrl } from '@/lib/utils';
-import { allPosts, allPages, allAuthors } from 'contentlayer/generated';
+import { allPosts, allPages } from 'contentlayer/generated';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const pagesRoutes = allPages.map(page => ({
@@ -13,21 +13,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         lastModified: new Date().toISOString(),
     }));
 
-    const authorsRoutes = allAuthors.map(post => ({
-        url: absoluteUrl(`${post.slug}`),
-        lastModified: new Date().toISOString(),
-    }));
-
     const routes = [
         '',
         '/pricing',
         '/blog',
-        '/frequently-asked-questions',
-        
+        '/about',
+
+        '/deep-cleaning-geelong',
+        '/regular-cleaning-geelong',
+        '/office-cleaning-geelong',
+        '/end-of-lease-cleaning-geelong',
+        '/carpet-cleaning-geelong',
+        '/window-cleaning-geelong',
+        '/oven-cleaning-geelong',
+        '/after-builder-cleaning-geelong',
     ].map(route => ({
         url: absoluteUrl(route),
         lastModified: new Date().toISOString(),
     }));
 
-    return [...routes, ...pagesRoutes, ...postsRoutes, ...authorsRoutes];
+    return [...routes, ...pagesRoutes, ...postsRoutes];
 }
