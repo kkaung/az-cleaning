@@ -1,5 +1,11 @@
 import { siteConfig } from '@/configs/site';
-import type { Graph, Organization, Product, WebSite } from 'schema-dts';
+import type {
+    Graph,
+    Organization,
+    Product,
+    WebSite,
+    LocalBusiness,
+} from 'schema-dts';
 import { absoluteUrl } from './utils';
 
 const isBrowser = typeof window !== 'undefined';
@@ -14,9 +20,9 @@ export const OrganizationSchema: Organization = {
     telephone: siteConfig.business.phone,
     address: {
         '@type': 'PostalAddress',
-        streetAddress: '15 Church St',
-        postalCode: '2300',
-        addressLocality: 'Newcastle',
+        streetAddress: '95 Malop St',
+        postalCode: '3220',
+        addressLocality: 'Geelong',
         addressCountry: 'Australia',
     },
     sameAs: [
@@ -44,6 +50,21 @@ export const ProductSchema: Product = {
     },
 };
 
+export const LocalBusinessSchema: LocalBusiness = {
+    '@type': 'LocalBusiness',
+    name: siteConfig.name,
+    image: absoluteUrl('/images/logo.png'),
+    email: siteConfig.business.email,
+    telephone: siteConfig.business.phone,
+    address: {
+        '@type': 'PostalAddress',
+        streetAddress: '95 Malop St',
+        postalCode: '3220',
+        addressLocality: 'Geelong',
+        addressCountry: 'Australia',
+    },
+};
+
 export const WebSiteSchema: WebSite = {
     '@type': 'WebSite',
     name: siteConfig.title,
@@ -53,5 +74,10 @@ export const WebSiteSchema: WebSite = {
 
 export const graphSchemas: Graph = {
     '@context': 'https://schema.org',
-    '@graph': [OrganizationSchema, WebSiteSchema, ProductSchema],
+    '@graph': [
+        OrganizationSchema,
+        WebSiteSchema,
+        ProductSchema,
+        LocalBusinessSchema,
+    ],
 };
