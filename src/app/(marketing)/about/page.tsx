@@ -50,21 +50,22 @@ export default function page() {
                 <section>
                     <h2>The Mission</h2>
                     <p>
-                        Under Kaung&apos;s visionary leadership, Coast Maid
+                        Under Kelvin&apos;s visionary leadership,
+                        {siteConfig.name}
                         transcended its origins as a mere cleaning service,
                         evolving into a catalyst for enhanced lifestyles. By
                         relieving individuals of the burdensome task of
                         household chores, Coast Maid strives to elevate the
-                        overall quality of life. Kaung perceives his company not
-                        only as a business entity but also as an indispensable
-                        cornerstone of the community.
+                        overall quality of life. Kelvin perceives his company
+                        not only as a business entity but also as an
+                        indispensable cornerstone of the community.
                     </p>
                 </section>
                 <section>
                     <h2>The Future</h2>
                     <p>
-                        Kaung&apos;s aspirations for Coast Maid reach far beyond
-                        traditional cleaning services. His goal is to
+                        Kelvin&apos;s aspirations for {siteConfig.name} reach
+                        far beyond traditional cleaning services. His goal is to
                         revolutionize customer satisfaction within the industry,
                         constantly adapting to meet the changing needs of
                         clients. While services may expand and diversify, the
