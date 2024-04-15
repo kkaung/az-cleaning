@@ -125,7 +125,7 @@ export default async function PostPage({ params }: PostPageProps) {
                                     <p className="font-semibold">
                                         by
                                         <Link
-                                            href={`/`}
+                                            href="/"
                                             className="ml-1 hover:underline"
                                         >
                                             {siteConfig.name}

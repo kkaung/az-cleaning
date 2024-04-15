@@ -5,13 +5,11 @@ import {
 } from '@/components/page-header';
 import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 import { Shell } from '@/components/shell';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import {
     Table,
     TableBody,
     TableCaption,
     TableCell,
-    TableFooter,
     TableHead,
     TableHeader,
     TableRow,
@@ -134,24 +132,93 @@ export default function Page() {
                     </TableBody>
                 </Table>
             </section>
-            <section className="my-8 max-w-xl mx-auto">
-                <Card className="border-0 bg-secondary/50 rounded-xl">
-                    <CardHeader>
-                        <div className="flex gap-4">
-                            <div className="font-semibold">
-                                <Link
-                                    href="/"
-                                    className="relative text-primary hover:underline"
-                                >
-                                    {siteConfig.name}
-                                </Link>
-                            </div>
-                        </div>
-                    </CardHeader>
-                    <CardContent className="space-y-4 text-foreground">
-                        <div className="flex gap-4"></div>
-                    </CardContent>
-                </Card>
+            <section className="my-8 max-w-xl mx-auto bg-secondary p-6 rounded-lg">
+                <div className="space-y-2">
+                    <div className="font-semibold">
+                        <Link href="/" rel="author">
+                            {siteConfig.name}
+                        </Link>
+                    </div>
+                    <p className="text-sm">
+                        {siteConfig.name} is a top-rated house cleaning company
+                        in Geelong. We offer tailored cleaning services for your
+                        homes, apartments and offices.
+                    </p>
+                    <ul className="grid grid-cols-1 gap-x-4 gap-y-2 text-sm">
+                        <li>
+                            <Link
+                                href="/deep-cleaning-geelong"
+                                title="Deep Cleaning Service Geelong"
+                                className="hover:underline"
+                            >
+                                Deep Cleaning
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href="/regular-cleaning-geelong"
+                                title="Regular Cleaning Service Geelong"
+                                className="hover:underline"
+                            >
+                                Regular Cleaning
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href="/bond-cleaning-geelong"
+                                title="Bond Cleaning Service Geelong"
+                                className="hover:underline"
+                            >
+                                End Of Lease Cleaning
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href="/office-cleaning-geelong"
+                                title="Office Cleaning Service Geelong"
+                                className="hover:underline"
+                            >
+                                Office Cleaning
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href="/oven-cleaning-geelong"
+                                title="Oven Cleaning Service Geelong"
+                                className="hover:underline"
+                            >
+                                Oven Cleaning
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href="/carpet-cleaning-geelong"
+                                title="Carpet Cleaning Service Geelong"
+                                className="hover:underline"
+                            >
+                                Carpet Cleaning
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href="/window-cleaning-geelong"
+                                title="Window Cleaning Service Geelong"
+                                className="hover:underline"
+                            >
+                                Window Cleaning
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href="/after-builder-cleaning-geelong"
+                                title="Post Construction Cleaning Service Geelong"
+                                className="hover:underline"
+                            >
+                                Construction Cleaning
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
             </section>
         </Shell>
     );

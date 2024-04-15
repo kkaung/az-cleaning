@@ -9,7 +9,7 @@ interface SiteFooterProps extends HTMLAttributes<HTMLElement> {}
 
 export default async function SiteFooter({ ...props }: SiteFooterProps) {
     return (
-        <footer className="border-t">
+        <footer className={`${props.className} border-t`}>
             <Shell as="div">
                 <div
                     id="footer-content"
