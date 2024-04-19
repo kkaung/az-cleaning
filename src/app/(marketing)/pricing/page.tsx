@@ -24,7 +24,7 @@ export const runtime = 'edge';
 
 export async function generateMetadata(): Promise<Metadata> {
     return {
-        title: 'House Cleaning Prices In Geelong',
+        title: 'House Cleaning Prices in Geelong',
         description: `Get crystal clear pricing on Geelong's top-rated house cleaning services. Find the perfect fit for your budget and needs, with options from weekly refreshes to deep dives.`,
         alternates: {
             canonical: '/pricing',

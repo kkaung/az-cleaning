@@ -23,7 +23,7 @@ export default function Page() {
                 { title: 'Home', href: '/' },
                 {
                     title: 'Carpet Cleaning',
-                    href: '/carpet-cleaning-wollongong',
+                    href: '/carpet-cleaning-geelong',
                 },
             ]}
         />

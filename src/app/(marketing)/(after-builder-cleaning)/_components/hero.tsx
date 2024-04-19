@@ -41,7 +41,7 @@ export default function Hero({ location, ...props }: HeroProps) {
         >
             <PageHeader className="mx-auto text-center space-y-6">
                 <PageHeaderHeading>
-                    Construction Cleaning Service In {location}
+                    Posts Construction Cleaning Service in {location}
                 </PageHeaderHeading>
                 <PageHeaderDescription className="mx-auto">
                     Say goodbye to grease and grime with our thorough

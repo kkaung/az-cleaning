@@ -8,6 +8,7 @@ import {
     PageHeaderHeading,
 } from '@/components/page-header';
 import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
+import Link from 'next/link';
 
 export const runtime = 'edge';
 
@@ -36,43 +37,26 @@ export default function page() {
                 </PageHeaderDescription>
             </PageHeader>
             <div className="mx-auto prose prose-quoteless prose-neutral dark:prose-invert">
-                <section>
-                    <h2>The Genesis</h2>
-                    <p>
-                        resident deeply attuned to the transformative influence
-                        of a tidy home on personal well-being. Recognizing the
-                        fast pace of contemporary living, Haroun conceptualized
-                        a dependable, top-tier cleaning service aimed at
-                        affording individuals the luxury of time and the
-                        serenity of a pristine living space.
-                    </p>
-                </section>
-                <section>
-                    <h2>The Mission</h2>
-                    <p>
-                        Under Kelvin&apos;s visionary leadership,
-                        {siteConfig.name}
-                        transcended its origins as a mere cleaning service,
-                        evolving into a catalyst for enhanced lifestyles. By
-                        relieving individuals of the burdensome task of
-                        household chores, Coast Maid strives to elevate the
-                        overall quality of life. Kelvin perceives his company
-                        not only as a business entity but also as an
-                        indispensable cornerstone of the community.
-                    </p>
-                </section>
-                <section>
-                    <h2>The Future</h2>
-                    <p>
-                        Kelvin&apos;s aspirations for {siteConfig.name} reach
-                        far beyond traditional cleaning services. His goal is to
-                        revolutionize customer satisfaction within the industry,
-                        constantly adapting to meet the changing needs of
-                        clients. While services may expand and diversify, the
-                        core mission remains unchanged: transforming houses into
-                        homes, one immaculate room at a time.
-                    </p>
-                </section>
+                <Link href="/">{siteConfig.name}</Link> was founded in 2015 by
+                husband and wife team Alex and Zara, two hardworking locals who
+                saw a need for a truly reliable,
+                <Link href="/">professional house cleaning service</Link> in
+                their hometown. Inspired by their own struggles to find a
+                trustworthy cleaner they felt comfortable having in their home
+                with young children, they created AZ with a mission to raise the
+                standard for <Link href="/">domestic cleaning in Geelong</Link>.
+                What started with just the two of them has grown into a fully
+                insured and vetted team of housekeeping professionals unified by
+                a commitment to excellence and integrity. From their
+                eco-friendly product choices to their meticulous processes and
+                attention to detail, everything {siteConfig.name} does is driven
+                by one goal - to give busy families the peace of mind that comes
+                with living in an impeccably cleaned home, allowing them to
+                spend precious free time making memories instead of chores. As
+                Geelong&apos;s Premier maid service,
+                {siteConfig.name} continues to be powered by the family values
+                and local pride that took their small dream and made it a big
+                reality.
             </div>
         </Shell>
     );

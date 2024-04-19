@@ -6,6 +6,8 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Callout } from '@/components/mdx/callout';
 import { MdxCard } from '@/components/mdx/mdx-card';
+import MdxReviews from './mdx-reviews';
+import MdxFAQs from './mdx-faqs';
 
 /** Originally from `shadcn/ui-docs`
  * @link https://github.com/shadcn/ui/blob/main/apps/www/components/mdx-components.tsx
@@ -161,6 +163,8 @@ const components = {
     AspectRatio,
     Card: MdxCard,
     Callout,
+    Reviews: MdxReviews,
+    FAQs: MdxFAQs,
 };
 
 interface MdxProps {

@@ -5,8 +5,8 @@ export const getMetadata = (location: string): Metadata => {
     const pathname = getPathname();
 
     return {
-        title: `Residential Window Cleaning Service In ${location} - Window Cleaning ${location}`,
-        description: `Crystal clear windows in ${location}! Get a free quote for professional residential window cleaning from trusted local companies.`,
+        title: `#1 Residential Window Cleaning Service in ${location} - Window Cleaner Near Me in ${location}`,
+        description: `Best Window Cleaning Service ✔️ 100% Guarantee ✔️ 5 Star-Rated Bond Cleaning ✔️ Trusted & Vetted Cleaner ✔️ Instant Online Booking`,
         alternates: {
             canonical: pathname,
         },

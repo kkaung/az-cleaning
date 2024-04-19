@@ -98,6 +98,10 @@ export const siteConfig = {
                     title: 'After Builder Cleaning Geelong',
                     href: '/after-builder-cleaning-geelong',
                 },
+                {
+                    title: 'House Cleaning Service Geelong',
+                    href: '/',
+                },
             ],
         },
         {
