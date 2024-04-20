@@ -16,8 +16,8 @@ export default function Page() {
             segments={[
                 { title: 'Home', href: '/' },
                 {
-                    title: 'Window Cleaning',
-                    href: '/window-cleaning',
+                    title: 'Deep Cleaning',
+                    href: '/deep-cleaning-geelong',
                 },
             ]}
         />

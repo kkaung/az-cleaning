@@ -5,8 +5,6 @@ import { checkUserAgentForGooglebot } from '@/lib/next';
 import CloakedContent from './_components/cloaked-content';
 import Content from './_components/content';
 
-export const runtime = 'edge';
-
 export const metadata: Metadata = {
     title: `#1 House Cleaning Service in Geelong - Cleaner Near Me in Geelong`,
     description:
