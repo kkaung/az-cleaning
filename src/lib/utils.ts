@@ -53,3 +53,15 @@ export function formatDate(input: string | number): string {
 export function absoluteUrl(path: string) {
     return `${env.NEXT_PUBLIC_APP_URL}${path}`;
 }
+
+export function formatPrice(
+    price: number | string,
+    options: Intl.NumberFormatOptions = {}
+) {
+    return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: options.currency ?? 'USD',
+        notation: options.notation ?? 'compact',
+        ...options,
+    }).format(Number(price));
+}

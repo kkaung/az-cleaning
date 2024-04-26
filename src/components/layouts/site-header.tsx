@@ -50,6 +50,14 @@ const SiteHeader = ({ ...props }: SiteHeaderProps) => {
                         >
                             Book Online
                         </Link>
+                        <Link
+                            href="/cart"
+                            className={cn(
+                                buttonVariants({ variant: 'secondary' })
+                            )}
+                        >
+                            <Icons.shoppingCart className="w-4 h-4" />
+                        </Link>
                     </div>
                 </nav>
             </div>

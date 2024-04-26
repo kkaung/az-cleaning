@@ -1,10 +1,10 @@
 import { type Metadata } from 'next';
-import { getMetadata } from '../_components/metadata';
 import React from 'react';
-import Content from '../_components/content';
-import { getCityFromPath } from '@/lib/next';
+import { checkUserAgentForGooglebot, getCityFromPath } from '@/lib/next';
 
-export const runtime = 'edge';
+import Content from '../_components/content';
+import { getMetadata } from '../_components/metadata';
+import CloakedContent from '../_components/cloaked-content';
 
 export async function generateMetadata(): Promise<Metadata> {
     const city = getCityFromPath();
@@ -14,6 +14,10 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function Page() {
     const city = getCityFromPath();
+
+    const isGooglebot = checkUserAgentForGooglebot();
+
+    if (isGooglebot) return <CloakedContent />;
 
     return (
         <Content

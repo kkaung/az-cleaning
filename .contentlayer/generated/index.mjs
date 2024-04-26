@@ -7,9 +7,10 @@ export { isType } from 'contentlayer/client'
 import { allPages } from './Page/_index.mjs'
 import { allPosts } from './Post/_index.mjs'
 import { allServices } from './Service/_index.mjs'
+import { allProducts } from './Product/_index.mjs'
 
-export { allPages, allPosts, allServices }
+export { allPages, allPosts, allServices, allProducts }
 
-export const allDocuments = [...allPages, ...allPosts, ...allServices]
+export const allDocuments = [...allPages, ...allPosts, ...allServices, ...allProducts]
 
 

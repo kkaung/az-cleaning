@@ -110,6 +110,7 @@ export const siteConfig = {
                 { title: 'Contact Us', href: '/contact' },
                 { title: 'Blog', href: '/blog' },
                 { title: 'Pricing', href: '/pricing' },
+                { title: 'Products', href: '/products' },
                 { title: 'Privacy Policy', href: '/privacy' },
                 { title: 'Terms And Conditions', href: '/terms' },
             ],

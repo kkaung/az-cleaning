@@ -40,6 +40,24 @@ export type Post = {
   readingTime: number
 }
 
+export type Product = {
+  /** File path relative to `contentDirPath` */
+  _id: string
+  _raw: Local.RawDocumentData
+  type: 'Product'
+  title: string
+  description?: string | undefined
+  price: number
+  image: string
+  ratingValue: string
+  ratingCount: number
+  /** MDX file body */
+  body: MDX
+  slug: string
+  slugAsParams: string
+  readingTime: number
+}
+
 export type Service = {
   /** File path relative to `contentDirPath` */
   _id: string
@@ -62,8 +80,8 @@ export type Service = {
 export type AllTypes = DocumentTypes | NestedTypes
 export type AllTypeNames = DocumentTypeNames | NestedTypeNames
 
-export type DocumentTypes = Page | Post | Service
-export type DocumentTypeNames = 'Page' | 'Post' | 'Service'
+export type DocumentTypes = Page | Post | Product | Service
+export type DocumentTypeNames = 'Page' | 'Post' | 'Product' | 'Service'
 
 export type NestedTypes = never
 export type NestedTypeNames = never
@@ -73,6 +91,7 @@ export type DataExports = {
   allPages: Page[]
   allPosts: Post[]
   allServices: Service[]
+  allProducts: Product[]
 }
 
 
@@ -94,6 +113,7 @@ declare global {
 export type DocumentTypeMap = {
   Page: Page
   Post: Post
+  Product: Product
   Service: Service
 }
 

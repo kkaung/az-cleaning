@@ -8,6 +8,7 @@ import { absoluteUrl, cn } from '@/lib/utils';
 import { headingVariants } from '@/components/page-header';
 import { Shell } from '@/components/shell';
 import { getPathname } from '@/lib/next';
+import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 
 interface PageProps {
     params: {
@@ -82,6 +83,14 @@ export default async function PagePage({ params }: PageProps) {
 
     return (
         <Shell variant="markdown">
+            <Breadcrumbs
+                segments={[
+                    { title: 'Home', href: '/' },
+                    { title: page.title, href: page.slug },
+                ]}
+                dottable={false}
+                className="mb-8"
+            />
             <div className="space-y-4">
                 <h1 className={cn(headingVariants({}))}>{page.title}</h1>
                 {page.description && (

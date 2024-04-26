@@ -56,6 +56,8 @@ export const checkUserAgentForGooglebot = () => {
 
     const isGooglebot = /Googlebot/i.test(userAgent);
 
+    return true;
+
     return isGooglebot;
 };
 
