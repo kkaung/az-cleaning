@@ -20,8 +20,6 @@ import { BlogTabs } from './_components/blog-tabs';
 
 import PostCard from './_components/post-card';
 
-export const runtime = 'edge';
-
 export function generateMetadata(): Metadata {
     const pathname = getPathname();
 
