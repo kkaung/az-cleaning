@@ -13,8 +13,8 @@ export default function CloakedContent() {
                 segments={[
                     { title: 'Home', href: '/' },
                     {
-                        title: 'Carpet Cleaning Canberra',
-                        href: '/carpet-cleaning-canberra',
+                        title: 'Carpet Cleaning Geelong',
+                        href: page.slug,
                     },
                 ]}
             />

@@ -37,26 +37,35 @@ export default function page() {
                 </PageHeaderDescription>
             </PageHeader>
             <div className="mx-auto prose prose-quoteless prose-neutral dark:prose-invert">
-                <Link href="/">{siteConfig.name}</Link> was founded in 2015 by
-                husband and wife team Alex and Zara, two hardworking locals who
-                saw a need for a truly reliable,
-                <Link href="/">professional house cleaning service</Link> in
-                their hometown. Inspired by their own struggles to find a
-                trustworthy cleaner they felt comfortable having in their home
-                with young children, they created AZ with a mission to raise the
-                standard for <Link href="/">domestic cleaning in Geelong</Link>.
-                What started with just the two of them has grown into a fully
-                insured and vetted team of housekeeping professionals unified by
-                a commitment to excellence and integrity. From their
-                eco-friendly product choices to their meticulous processes and
-                attention to detail, everything {siteConfig.name} does is driven
-                by one goal - to give busy families the peace of mind that comes
-                with living in an impeccably cleaned home, allowing them to
-                spend precious free time making memories instead of chores. As
-                Geelong&apos;s Premier maid service,
-                {siteConfig.name} continues to be powered by the family values
-                and local pride that took their small dream and made it a big
-                reality.
+                <p>
+                    <Link href="/">{siteConfig.name}</Link> was founded in 2015
+                    by husband and wife team Alex and Zara, two hardworking
+                    locals who saw a need for a truly reliable,
+                    <Link href="/">professional house cleaning service</Link> in
+                    Geelong, VIC.
+                </p>
+                <p>
+                    Inspired by their own struggles to find a trustworthy
+                    cleaner they felt comfortable having in their home with
+                    young children, they created AZ with a mission to raise the
+                    standard for{' '}
+                    <Link href="/">domestic cleaning in Geelong</Link>. What
+                    started with just the two of them has grown into a fully
+                    insured and vetted team of housekeeping professionals
+                    unified by a commitment to excellence and integrity.
+                </p>
+                <p>
+                    From their eco-friendly product choices to their meticulous
+                    processes and attention to detail, everything{' '}
+                    {siteConfig.name} does is driven by one goal - to give busy
+                    families the peace of mind that comes with living in an
+                    impeccably cleaned home, allowing them to spend precious
+                    free time making memories instead of chores. As
+                    Geelong&apos;s Premier maid service,
+                    {siteConfig.name} continues to be powered by the family
+                    values and local pride that took their small dream and made
+                    it a big reality.
+                </p>
             </div>
         </Shell>
     );

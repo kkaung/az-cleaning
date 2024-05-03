@@ -15,8 +15,8 @@ export default function CloakedContent() {
                 segments={[
                     { title: 'Home', href: '/' },
                     {
-                        title: 'End Of Lease Cleaning Canberra',
-                        href: '/end-of-lease-cleaning-canberra',
+                        title: 'End Of Lease Cleaning Geelong',
+                        href: page.slug,
                     },
                 ]}
             />

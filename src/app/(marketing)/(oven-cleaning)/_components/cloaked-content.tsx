@@ -14,7 +14,7 @@ export default function CloakedContent() {
                     { title: 'Home', href: '/' },
                     {
                         title: 'Oven Cleaning Geelong',
-                        href: '/oven-cleaning-geelong',
+                        href: page.slug,
                     },
                 ]}
             />

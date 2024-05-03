@@ -14,7 +14,7 @@ export default function CloakedContent() {
                     { title: 'Home', href: '/' },
                     {
                         title: 'Regular Cleaning Geelong',
-                        href: '/regular-cleaning-canberra',
+                        href: page.slug,
                     },
                 ]}
             />

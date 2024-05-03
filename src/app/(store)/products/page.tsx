@@ -31,7 +31,7 @@ export default function Page() {
                     {siteConfig.name} Shop
                 </PageHeaderHeading>
             </PageHeader>
-            <section className="grid grid-cols-2 lg:grid-cols-6">
+            <section className="grid grid-cols-2 gap-6 lg:grid-cols-6">
                 {allProducts.map(product => (
                     <div key={product.slugAsParams}>
                         <Link href={product.slug}>{product.title}</Link>
