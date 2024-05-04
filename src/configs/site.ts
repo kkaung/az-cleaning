@@ -123,7 +123,7 @@ export const siteConfig = {
     business: {
         email: 'contact@azcleaning.com.au',
         phone: '+61 414076980',
-        address: '95 Malop St, Geelong VIC 3220',
+        address: '104 Market Square Mall, Geelong VIC 3220',
         openingHour: 'Mon – Sun: 9:00 AM – 5:00 PM',
     },
     rating: {
