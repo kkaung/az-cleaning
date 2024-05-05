@@ -58,7 +58,7 @@ export const LocalBusinessSchema: LocalBusiness = {
     telephone: siteConfig.business.phone,
     address: {
         '@type': 'PostalAddress',
-        streetAddress: '95 Malop St',
+        streetAddress: '10/104 Little Malop St',
         postalCode: '3220',
         addressLocality: 'Geelong',
         addressCountry: 'Australia',
