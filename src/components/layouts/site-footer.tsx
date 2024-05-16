@@ -4,6 +4,7 @@ import { Shell } from '@/components/shell';
 import { Icons } from '@/components/icons';
 import { cn } from '@/lib/utils';
 import { type HTMLAttributes } from 'react';
+import { links } from '@/configs/links';
 
 interface SiteFooterProps extends HTMLAttributes<HTMLElement> {}
 
@@ -101,6 +102,13 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                             </div>
                         ))}
                     </div>
+                </div>
+                <div className="flex items-center gap-1 text-xs text-muted-foreground flex-wrap">
+                    {links.map(l => (
+                        <Link href={l.link} key={l.title} target="_blank">
+                            {l.title}
+                        </Link>
+                    ))}
                 </div>
                 <div
                     id="footer-bottom"
