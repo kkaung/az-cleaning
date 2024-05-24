@@ -25,10 +25,11 @@ const SiteHeader = ({ ...props }: SiteHeaderProps) => {
                         mainNavItems={siteConfig.mainNav}
                         sidebarNavItems={siteConfig.mainNav}
                     />
-                    <span className="font-extrabold text-2xl italic text-primary">
-                        {siteConfig.logo}
-                    </span>
-                    <Link aria-label="Home" href="/" className="sr-only">
+                    <Link
+                        className="font-extrabold text-lg text-primary text-nowrap"
+                        aria-label="Home"
+                        href="/"
+                    >
                         {siteConfig.title}
                     </Link>
                 </div>
