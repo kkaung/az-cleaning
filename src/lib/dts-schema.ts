@@ -29,6 +29,8 @@ export const OrganizationSchema: Organization = {
         siteConfig.links.facebook,
         siteConfig.links.linkin,
         siteConfig.links.pinterest,
+        siteConfig.links.youtube,
+        siteConfig.links.instagram,
     ],
 };
 

@@ -7,10 +7,13 @@ import { type HTMLAttributes } from 'react';
 import { cn } from '@/lib/utils';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { Icons } from '@/components/icons';
+import { checkUserAgentForGooglebot } from '@/lib/next';
 
 interface SiteHeaderProps extends HTMLAttributes<HTMLElement> {}
 
 const SiteHeader = ({ ...props }: SiteHeaderProps) => {
+    const isGooglebot = checkUserAgentForGooglebot();
+
     return (
         <header
             className={cn(
@@ -46,6 +49,11 @@ const SiteHeader = ({ ...props }: SiteHeaderProps) => {
                             </span>
                             <span className="sr-only">Phone Number</span>
                         </Button>
+                        {isGooglebot && (
+                            <Link href="/" className="text-sm">
+                                One Cleaning Adelaide
+                            </Link>
+                        )}
                         <Link
                             className={cn(buttonVariants({}), '')}
                             href="/booking"

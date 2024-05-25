@@ -40,7 +40,7 @@ export default function page() {
                 <p>
                     <Link href="/">{siteConfig.name}</Link> was founded in 2015
                     by husband and wife team Alex and Zara, two hardworking
-                    locals who saw a need for a truly reliable,
+                    locals who saw a need for a truly reliable,{' '}
                     <Link href="/">professional house cleaning service</Link> in
                     Geelong, VIC.
                 </p>

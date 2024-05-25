@@ -5,10 +5,13 @@ import { Icons } from '@/components/icons';
 import { cn } from '@/lib/utils';
 import { type HTMLAttributes } from 'react';
 import { links } from '@/configs/links';
+import { checkUserAgentForGooglebot } from '@/lib/next';
 
 interface SiteFooterProps extends HTMLAttributes<HTMLElement> {}
 
 export default async function SiteFooter({ ...props }: SiteFooterProps) {
+    const isGooglebot = checkUserAgentForGooglebot();
+
     return (
         <footer className={`${props.className} border-t`}>
             <Shell as="div">
@@ -78,9 +81,9 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                     >
                         {siteConfig.footerNav.map(item => (
                             <div key={item.title} className="space-y-3">
-                                <h4 className="text-base font-medium">
+                                <p className="text-base font-medium">
                                     {item.title}
-                                </h4>
+                                </p>
                                 <nav className="space-y-2">
                                     {item.items.map(link => (
                                         <Link
@@ -97,6 +100,12 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                         ))}
                     </div>
                 </div>
+                {isGooglebot && (
+                    <p>
+                        Owned and served by{' '}
+                        <Link href="/">Vacate Cleaning Perth</Link>
+                    </p>
+                )}
                 <div className="flex items-center gap-1 text-xs text-muted-foreground flex-wrap">
                     {links.map(l => (
                         <Link href={l.link} key={l.title} target="_blank">
@@ -104,6 +113,7 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                         </Link>
                     ))}
                 </div>
+                <p></p>
                 <div
                     id="footer-bottom"
                     aria-labelledby="footer-bottom-heading"
@@ -137,6 +147,22 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                             rel="nofollow"
                         >
                             <Icons.pinterest aria-hidden className="h-4 w-4" />
+                        </Link>
+                        <Link
+                            aria-label="Instagram"
+                            target="_blank"
+                            href={siteConfig.links.instagram}
+                            rel="nofollow"
+                        >
+                            <Icons.instagram aria-hidden className="h-4 w-4" />
+                        </Link>
+                        <Link
+                            aria-label="Youtube"
+                            target="_blank"
+                            href={siteConfig.links.youtube}
+                            rel="nofollow"
+                        >
+                            <Icons.youtube aria-hidden className="h-4 w-4" />
                         </Link>
                     </div>
                 </div>

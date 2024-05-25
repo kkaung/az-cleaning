@@ -7,6 +7,8 @@ const links = {
     facebook: 'https://www.facebook.com/',
     pinterest: 'https://pinterest.com/',
     linkin: 'https://linkin.com',
+    instagram: 'https://instagram.com',
+    youtube: 'https://youtube.com',
 };
 
 export const siteConfig = {

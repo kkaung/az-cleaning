@@ -90,7 +90,7 @@ export default function Page() {
                     services, from house cleaning to{' '}
                     <Link href="/office-cleaning-geelong">office cleaning</Link>
                     ,{' '}
-                    <Link href="/bond-cleaning-geelong">
+                    <Link href="/end-of-lease-cleaning-geelong">
                         end of lease cleaning
                     </Link>{' '}
                     and{' '}
