@@ -107,14 +107,6 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                         </Link>
                     ))}
                 </div>
-                {isGooglebot && (
-                    <p>
-                        Owned and operated by{' '}
-                        <Link href="https://perthvacatecleaning.net.au">
-                            Vacate Cleaning Perth
-                        </Link>
-                    </p>
-                )}
                 <div
                     id="footer-bottom"
                     aria-labelledby="footer-bottom-heading"
