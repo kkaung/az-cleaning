@@ -100,12 +100,6 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                         ))}
                     </div>
                 </div>
-                {isGooglebot && (
-                    <p>
-                        Owned and served by{' '}
-                        <Link href="/">Vacate Cleaning Perth</Link>
-                    </p>
-                )}
                 <div className="flex items-center gap-1 text-xs text-muted-foreground flex-wrap">
                     {links.map(l => (
                         <Link href={l.link} key={l.title} target="_blank">
@@ -115,7 +109,10 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                 </div>
                 {isGooglebot && (
                     <p>
-                        Owned and operated by <Link href="https://perthvacatecleaning.net.au">Vacate Cleaning Perth</Link>
+                        Owned and operated by{' '}
+                        <Link href="https://perthvacatecleaning.net.au">
+                            Vacate Cleaning Perth
+                        </Link>
                     </p>
                 )}
                 <div

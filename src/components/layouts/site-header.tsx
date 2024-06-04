@@ -47,7 +47,6 @@ const SiteHeader = ({ ...props }: SiteHeaderProps) => {
                             <span className="hidden sm:inline">
                                 {siteConfig.business.phone}
                             </span>
-                            <span className="sr-only">Phone Number</span>
                         </Button>
                         {isGooglebot && (
                             <Link href="/" className="text-sm">
