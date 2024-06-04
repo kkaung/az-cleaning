@@ -20,13 +20,14 @@ export const OrganizationSchema: Organization = {
     telephone: siteConfig.business.phone,
     address: {
         '@type': 'PostalAddress',
-        streetAddress: '95 Malop St',
+        streetAddress: '10/104 Little Malop St',
         postalCode: '3220',
         addressLocality: 'Geelong',
         addressCountry: 'Australia',
     },
     sameAs: [
         siteConfig.links.facebook,
+        siteConfig.links.twitter,
         siteConfig.links.linkin,
         siteConfig.links.pinterest,
         siteConfig.links.youtube,

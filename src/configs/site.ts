@@ -4,11 +4,13 @@ import type { FooterItem, MainNavItem } from '@/types';
 export type SiteConfig = typeof siteConfig;
 
 const links = {
-    facebook: 'https://www.facebook.com/',
-    pinterest: 'https://pinterest.com/',
+    facebook:
+        'https://www.facebook.com/people/AZ-Cleaning-Geelong/61560327820373/',
+    twitter: 'https://x.com/azcleaning_',
+    pinterest: 'https://www.pinterest.com.au/azcleaning_',
     linkin: 'https://linkin.com',
-    instagram: 'https://instagram.com',
-    youtube: 'https://youtube.com',
+    instagram: 'https://www.instagram.com/azcleaning_/',
+    youtube: 'https://www.youtube.com/@azcleaning_',
 };
 
 export const siteConfig = {

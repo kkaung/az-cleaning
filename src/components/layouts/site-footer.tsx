@@ -126,6 +126,14 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                             <Icons.facebook aria-hidden className="h-4 w-4" />
                         </Link>
                         <Link
+                            aria-label="Twitter"
+                            target="_blank"
+                            href={siteConfig.links.twitter}
+                            rel="nofollow"
+                        >
+                            <Icons.twitter aria-hidden className="h-4 w-4" />
+                        </Link>
+                        <Link
                             aria-label="Linkin"
                             target="_blank"
                             href={siteConfig.links.linkin}
