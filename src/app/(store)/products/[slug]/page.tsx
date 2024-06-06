@@ -74,6 +74,14 @@ export default async function Page({ params }: ProductPageProps) {
             ratingValue: product!.ratingValue,
             ratingCount: product!.ratingCount,
         },
+        offers: {
+            '@type': 'Offer',
+            priceCurrency: 'AUD', 
+            price: product!.price, 
+            itemCondition: 'https://schema.org/NewCondition',
+            availability: 'https://schema.org/InStock',
+            url: absoluteUrl(`/products/${product!.slugAsParams}`),
+        },
     };
 
     const graphSchemas: Graph = {
@@ -114,13 +122,6 @@ export default async function Page({ params }: ProductPageProps) {
                             </p>
                         </div>
                         <Separator className="my-1.5" />
-                        <div className="flex items-center justify-between">
-                            {/* <Rating rating={Math.round(product.rating / 5)} />
-                        <UpdateProductRatingButton
-                            productId={product.id}
-                            rating={product.rating}
-                        /> */}
-                        </div>
                         <Separator className="mt-5" />
                         <Button>Add To Cart</Button>
                         <Separator className="mt-5" />
