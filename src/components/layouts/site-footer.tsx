@@ -40,27 +40,53 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                                 Cleaner Near Me
                             </Link>
                         </div>
-                        <div className="flex flex-col mt-2 space-y-2">
+                        <div
+                            itemScope
+                            itemType="http://schema.org/LocalBusiness"
+                            className="flex flex-col mt-6 space-y-2"
+                        >
+                            <div itemProp="name" className="font-bold text-sm">
+                                {siteConfig.name}
+                            </div>
                             <div className={cn('cursor-pointer text-sm')}>
                                 <Icons.mail
                                     className="w-4 h-4 mr-1 inline"
                                     aria-hidden
                                 />
-                                {siteConfig.business.email}
+                                <span itemProp="email">
+                                    {siteConfig.business.email}
+                                </span>
                             </div>
-                            <div className={cn('cursor-pointer text-sm')}>
+                            <Link
+                                href={siteConfig.business.phone}
+                                className={cn('cursor-pointer text-sm')}
+                            >
                                 <Icons.phone
                                     className="w-4 h-4 mr-1 inline"
                                     aria-hidden
                                 />
-                                {siteConfig.business.phone}
-                            </div>
-                            <div className={cn('cursor-pointer text-sm')}>
+                                <span itemProp="telephone">
+                                    {siteConfig.business.phone}
+                                </span>
+                            </Link>
+                            <div
+                                itemProp="address"
+                                itemType="http://schema.org/PostalAddress"
+                                className={cn('cursor-pointer text-sm')}
+                            >
                                 <Icons.mapPin
                                     aria-hidden
                                     className="w-4 h-4 mr-1 inline"
                                 />
-                                {siteConfig.business.address}
+                                <span itemProp="streetAddress">
+                                    10/104 Little Malop St
+                                </span>
+                                ,{' '}
+                                <span itemProp="addressLocality">
+                                    Geelong VIC
+                                </span>{' '}
+                                <span itemProp="postalCode">3220</span>{' '}
+                                <span itemProp="addressCountry">Australia</span>
                             </div>
                             <div className={cn('cursor-pointer text-sm')}>
                                 <Icons.clock
@@ -69,9 +95,13 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                                 />
                                 {siteConfig.business.openingHour}
                             </div>
-                            <div className="text-muted-foreground">
-                                <Link href="/">{siteConfig.domain}</Link>
-                            </div>
+                            <Link
+                                href="/"
+                                className="text-muted-foreground text-sm mt-4 hover:text-primary"
+                                itemProp="url"
+                            >
+                                {siteConfig.domain}
+                            </Link>
                         </div>
                     </div>
                     <div

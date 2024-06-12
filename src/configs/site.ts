@@ -121,7 +121,10 @@ export const siteConfig = {
         },
         {
             title: 'Company',
-            items: [{ title: 'About Us', href: '/about' }],
+            items: [
+                { title: 'About Us', href: '/about' },
+                { title: 'Careers', href: '/careers' },
+            ],
         },
     ] satisfies FooterItem[],
     business: {

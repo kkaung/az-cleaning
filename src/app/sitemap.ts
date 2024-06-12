@@ -18,7 +18,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         lastModified: new Date().toISOString(),
     }));
 
-    const routes = [''].map(route => ({
+    const routes = [
+        '',
+        '/deep-cleaning-geelong',
+        '/regular-cleaning-geelong',
+        '/end-of-lease-cleaning-geelong',
+        '/carpet-cleaning-geelong',
+        '/office-cleaning-geelong',
+        '/window-cleaning-geelong',
+        '/oven-cleaning-geelong',
+        '/after-builder-cleaning-geelong',
+    ].map(route => ({
         url: absoluteUrl(route),
         lastModified: new Date().toISOString(),
     }));
