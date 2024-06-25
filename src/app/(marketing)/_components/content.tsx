@@ -4,7 +4,9 @@ import { Shell } from '@/components/shell';
 import Hero from './hero';
 import Features from './features';
 import HowWork from './how-work';
-import FAQs from './faqs';
+import About from './about';
+import Services from './services';
+import Commitment from './commitment';
 
 interface ContentProps {
     location: string;
@@ -14,10 +16,12 @@ interface ContentProps {
 export default function Content({ location }: ContentProps) {
     return (
         <Shell>
-            <Hero />
+            <Hero location={location} />
             <HowWork />
             <Features location={location} />
-            <FAQs />
+            <Services location={location} />
+            <About location={location} />
+            <Commitment />
         </Shell>
     );
 }

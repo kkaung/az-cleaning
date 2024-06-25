@@ -28,13 +28,18 @@ const SiteHeader = ({ ...props }: SiteHeaderProps) => {
                         mainNavItems={siteConfig.mainNav}
                         sidebarNavItems={siteConfig.mainNav}
                     />
-                    <Link
-                        className="font-extrabold text-lg text-primary text-nowrap"
-                        aria-label="Home"
-                        href="/"
-                    >
-                        {siteConfig.title}
-                    </Link>
+                    <div className="relative flex items-center space-x-2">
+                        <Icons.sparkles className="w-4 h-4" />
+                        <div>
+                            <Link
+                                aria-label="Home"
+                                href="/"
+                                className="hidden items-center space-x-2 font-bold text-nowrap sm:inline sm:text-lg"
+                            >
+                                {siteConfig.title}
+                            </Link>
+                        </div>
+                    </div>
                 </div>
                 <nav className="flex lg:flex-1 gap-4 items-center justify-between">
                     <MainNav items={siteConfig.mainNav} />
@@ -58,14 +63,6 @@ const SiteHeader = ({ ...props }: SiteHeaderProps) => {
                             href="/booking"
                         >
                             Book Online
-                        </Link>
-                        <Link
-                            href="/cart"
-                            className={cn(
-                                buttonVariants({ variant: 'secondary' })
-                            )}
-                        >
-                            <Icons.shoppingCart className="w-4 h-4" />
                         </Link>
                     </div>
                 </nav>

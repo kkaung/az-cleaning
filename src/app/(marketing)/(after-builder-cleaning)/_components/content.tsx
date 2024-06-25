@@ -1,10 +1,12 @@
 import React from 'react';
 import { Shell } from '@/components/shell';
+import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
+import Commitment from '@/components/commitment';
+
 import Hero from './hero';
 import Features from './features';
 import HowWork from './how-work';
-import FAQs from './faqs';
-import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
+import Services from './services';
 
 interface ContentProps {
     city: string;
@@ -18,7 +20,8 @@ export default function Content({ city, suburb, segments }: ContentProps) {
             <Hero location={city} />
             <HowWork />
             <Features location={city} />
-            <FAQs />
+            <Services location={city} />
+            <Commitment />
             <Breadcrumbs segments={segments} dottable={false} />
         </Shell>
     );

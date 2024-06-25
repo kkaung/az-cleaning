@@ -12,7 +12,7 @@ import Link from 'next/link';
 import React from 'react';
 
 export const metadata: Metadata = {
-    title: `Careers - ${siteConfig.name}`,
+    title: `Careers`,
     description: `Join ${siteConfig.name}'s top cleaning team: great pay, flexibility & local jobs. Apply now for happier house cleaning work near you.`,
     alternates: {
         canonical: '/careers',

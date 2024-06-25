@@ -1,6 +1,6 @@
 import { type MetadataRoute } from 'next';
 import { absoluteUrl } from '@/lib/utils';
-import { allPosts, allPages, allProducts } from 'contentlayer/generated';
+import { allPosts, allPages } from 'contentlayer/generated';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const pagesRoutes = allPages.map(page => ({
@@ -13,13 +13,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         lastModified: new Date().toISOString(),
     }));
 
-    const productsRoute = allProducts.map(product => ({
-        url: absoluteUrl(`${product.slug}`),
-        lastModified: new Date().toISOString(),
-    }));
-
     const routes = [
         '',
+        '/blog',
+        '/careers',
         '/deep-cleaning-geelong',
         '/regular-cleaning-geelong',
         '/end-of-lease-cleaning-geelong',
@@ -33,5 +30,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         lastModified: new Date().toISOString(),
     }));
 
-    return [...routes, ...pagesRoutes, ...postsRoutes, ...productsRoute];
+    return [...routes, ...pagesRoutes, ...postsRoutes];
 }

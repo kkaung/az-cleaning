@@ -1,16 +1,14 @@
-'use client';
-
 import { Icons } from '@/components/icons';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import React, { type HTMLAttributes } from 'react';
+import Image from 'next/image';
 import {
     PageHeader,
     PageHeaderDescription,
     PageHeaderHeading,
 } from '@/components/page-header';
-import Image from 'next/image';
 import AvatarOne from '/public/avatars/avatar-01.png';
 import AvatarTwo from '/public/avatars/avatar-02.png';
 import AvatarThree from '/public/avatars/avatar-03.png';
@@ -40,11 +38,12 @@ export default function Hero({ location, ...props }: HeroProps) {
         >
             <PageHeader className="mx-auto text-center space-y-6">
                 <PageHeaderHeading>
-                    {location}&apos;s Most In Demand Oven Cleaning Service
+                    The #1 Professional Oven Cleaning Service In {location}
                 </PageHeaderHeading>
                 <PageHeaderDescription className="mx-auto">
-                    Say goodbye to grease and grime with our thorough oven
-                    cleaning service.
+                    We&apos;re {location}&apos;s premier professional oven
+                    cleaning service, dedicated to rescuing your oven from the
+                    depths of despair and restoring it to its sparkling glory.
                 </PageHeaderDescription>
             </PageHeader>
             <ul className="mx-auto gird text-center space-y-2 mt-6 font-semibold">
@@ -103,7 +102,7 @@ export default function Hero({ location, ...props }: HeroProps) {
                         ))}
                     </div>
                     <p className="text-sm font-semibold">
-                        Trusted by 1000+ families in Wollongong
+                        Trusted by 1000+ families in {location}
                     </p>
                 </div>
             </div>

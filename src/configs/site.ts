@@ -8,7 +8,7 @@ const links = {
         'https://www.facebook.com/people/AZ-Cleaning-Geelong/61560327820373/',
     twitter: 'https://x.com/azcleaning_',
     pinterest: 'https://www.pinterest.com.au/azcleaning_',
-    linkin: 'https://linkin.com',
+    linkedin: 'https://linkin.com',
     instagram: 'https://www.instagram.com/azcleaning_/',
     youtube: 'https://www.youtube.com/@azcleaning_',
 };
@@ -19,7 +19,7 @@ export const siteConfig = {
     title: 'AZ Cleaning Geelong',
     domain: 'azcleaning.com.au',
     description:
-        'Expert cleaning services in Geelong. We provides top-rated house and office cleaning. Insured, reliable, and affordable. Book online today!',
+        'AZ Cleaning Geelong is a top-rated cleaning company in Melbourne, VIC. We offer tailored house cleaning and maid services for your homes, apartments and offices.',
     url: 'https://azcleaning.com.au',
     ogImage: 'https://azcleaning.com.au/opengraph-image.png',
     mainNav: [
@@ -115,6 +115,8 @@ export const siteConfig = {
                 { title: 'Blog', href: '/blog' },
                 { title: 'Pricing', href: '/pricing' },
                 { title: 'Products', href: '/products' },
+                { title: 'Services', href: '/services' },
+                { title: 'Locations', href: '/locations' },
                 { title: 'Privacy Policy', href: '/privacy' },
                 { title: 'Terms And Conditions', href: '/terms' },
             ],
@@ -132,10 +134,17 @@ export const siteConfig = {
         phone: '+61 414076980',
         address: '10/104 Little Malop St, Geelong VIC 3220',
         openingHour: 'Mon – Sun: 9:00 AM – 5:00 PM',
+        detailsAddress: {
+            streetAddress: '10/104 Little Malop St',
+            addressLocality: 'Geelong',
+            addressRegion: 'VIC',
+            postalCode: '3220',
+            addressCountry: 'Australia',
+        },
     },
     rating: {
         ratingValue: '4.9',
-        ratingCount: 727,
+        ratingCount: 1027,
     },
 };
 

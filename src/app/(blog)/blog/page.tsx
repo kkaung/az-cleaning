@@ -50,15 +50,11 @@ export default function Page() {
             </PageHeader>
             <section className="mt-8 max-w-5xl w-full mx-auto">
                 <BlogTabs />
-                <ul className="grid gap-6 grid-cols-1 mt-12 sm:grid-cols-2 md:grid-cols-3">
+                <div className="grid gap-6 grid-cols-1 mt-12 sm:grid-cols-2 md:grid-cols-3">
                     {allPosts.map((post, idx) => {
-                        return (
-                            <li key={idx}>
-                                <PostCard post={post} />
-                            </li>
-                        );
+                        return <PostCard key={idx} post={post} />;
                     })}
-                </ul>
+                </div>
                 <Pagination className="mt-8">
                     <PaginationContent>
                         <PaginationItem>

@@ -40,11 +40,12 @@ export default function Hero({ location, ...props }: HeroProps) {
         >
             <PageHeader className="mx-auto text-center space-y-6">
                 <PageHeaderHeading>
-                    Regular Cleaning Service In {location}
+                    The #1 Regular Cleaning Service In {location}
                 </PageHeaderHeading>
                 <PageHeaderDescription className="mx-auto">
-                    Say goodbye to grease and grime with our thorough cleaning
-                    service.
+                    Transform your home with our expert regular cleaning
+                    service, ensuring a consistently spotless and inviting
+                    living space.
                 </PageHeaderDescription>
             </PageHeader>
             <ul className="mx-auto gird text-center space-y-2 mt-6 font-semibold">

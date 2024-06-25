@@ -41,11 +41,13 @@ export default function Hero({ location, ...props }: HeroProps) {
         >
             <PageHeader className="mx-auto text-center space-y-6">
                 <PageHeaderHeading>
-                    Deep Cleaning Service In {location}
+                    The #1 Spring Cleaning Service In {location}
                 </PageHeaderHeading>
                 <PageHeaderDescription className="mx-auto">
-                    Say goodbye to grease and grime with our thorough deep
-                    cleaning service.
+                    Is your {location} home yearning for more than a
+                    surface-level shine? Our spring cleaning service is your
+                    answer, transforming your space from tired to truly
+                    transformative.
                 </PageHeaderDescription>
             </PageHeader>
             <ul className="mx-auto gird text-center space-y-2 mt-6 font-semibold">

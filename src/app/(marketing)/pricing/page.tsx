@@ -19,6 +19,8 @@ import { formatDate } from '@/lib/utils';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import React from 'react';
+import Image from 'next/image';
+import Logo from '/public/logo.png';
 
 export async function generateMetadata(): Promise<Metadata> {
     return {
@@ -62,6 +64,25 @@ const pricingList = [
 ];
 
 export default function Page() {
+
+     const items = [
+         { title: 'House Cleaning', href: '/' },
+         { title: 'Spring Cleaning', href: '/deep-cleaning-geelong' },
+         { title: 'Regular Cleaning', href: '/regular-cleaning-geelong' },
+         {
+             title: 'End Of Lease Cleaning',
+             href: '/end-of-lease-cleaning-geelong',
+         },
+         { title: 'Office Cleaning', href: '/office-cleaning-geelong' },
+         { title: 'Oven Cleaning', href: '/oven-cleaning-geelong' },
+         { title: 'Carpet Cleaning', href: '/carpet-cleaning-geelong' },
+         { title: 'Window Cleaning', href: '/window-cleaning-geelong' },
+         {
+             title: 'After Builder Cleaning',
+             href: '/after-builder-cleaning-geelong',
+         },
+     ];
+
     return (
         <Shell as="article">
             <Breadcrumbs
@@ -77,36 +98,13 @@ export default function Page() {
                 </PageHeaderHeading>
                 <PageHeaderDescription className="mx-auto">
                     <time
-                        dateTime={'2024-01-04T00:00:00.000Z'}
+                        dateTime={'2024-06-24T00:00:00.000Z'}
                         className="block text-sm text-muted-foreground mb-2"
                     >
-                        Updated on {formatDate('2024-01-04T00:00:00.000Z')}
+                        Updated on {formatDate('2024-06-24T00:00:00.000Z')}
                     </time>
                 </PageHeaderDescription>
             </PageHeader>
-            <div className="mx-auto prose prose-quoteless prose-neutral dark:prose-invert">
-                <p>
-                    Coast Maid provides a range of high-quality cleaning
-                    services, from house cleaning to{' '}
-                    <Link href="/office-cleaning-geelong">office cleaning</Link>
-                    ,{' '}
-                    <Link href="/end-of-lease-cleaning-geelong">
-                        end of lease cleaning
-                    </Link>{' '}
-                    and{' '}
-                    <Link href="/carpet-cleaning-geelong">carpet cleaning</Link>
-                    . We cater to homes throughout Gold Coast, offering
-                    top-notch cleaning solutions at affordable prices, ensuring
-                    accessibility to the best cleaners in the city for all.
-                </p>
-                <p>
-                    This guide unveils the secrets to sparkling spaces without
-                    the shocking bill. From hourly rates to flat fees, discover
-                    the perfect cleaning solution for your home and budget.
-                    Breathe easy knowing you&apos;re getting expert service
-                    without the stress of hidden fees.
-                </p>
-            </div>
             <section className="broder max-w-xl mx-auto w-full">
                 <Table>
                     <TableCaption>A list of cleaning prices.</TableCaption>
@@ -130,94 +128,46 @@ export default function Page() {
                     </TableBody>
                 </Table>
             </section>
-            <section className="my-8 max-w-xl mx-auto bg-secondary p-6 rounded-lg">
+            <div className="bg-secondary/50 p-6 rounded-lg space-y-4 mt-8 max-w-xl mx-auto">
                 <div className="space-y-2">
-                    <div className="font-semibold">
-                        <Link href="/" rel="author">
-                            {siteConfig.name}
+                    <div
+                        itemScope
+                        itemProp="http://schema.org/Person"
+                        className="inline-flex items-center gap-2 text-lg font-bold leading-none"
+                    >
+                        <Image
+                            width={32}
+                            height={32}
+                            src={Logo}
+                            alt="Brisbane Bond Cleaner Avatar"
+                            itemProp="image"
+                            className="h-8 w-8 rounded-full object-cover"
+                        />
+                        <Link
+                            className="font-semibold"
+                            href="/"
+                            rel="author"
+                            itemProp="url"
+                        >
+                            <span itemProp="name">{siteConfig.name}</span>
                         </Link>
                     </div>
-                    <p className="text-sm">
-                        {siteConfig.name} is a top-rated house cleaning company
-                        in Geelong. We offer tailored cleaning services for your
-                        homes, apartments and offices.
-                    </p>
-                    <ul className="grid grid-cols-1 gap-x-4 gap-y-2 text-sm">
-                        <li>
-                            <Link
-                                href="/deep-cleaning-geelong"
-                                title="Deep Cleaning Service Geelong"
-                                className="hover:underline"
-                            >
-                                Deep Cleaning
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href="/regular-cleaning-geelong"
-                                title="Regular Cleaning Service Geelong"
-                                className="hover:underline"
-                            >
-                                Regular Cleaning
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href="/bond-cleaning-geelong"
-                                title="Bond Cleaning Service Geelong"
-                                className="hover:underline"
-                            >
-                                End Of Lease Cleaning
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href="/office-cleaning-geelong"
-                                title="Office Cleaning Service Geelong"
-                                className="hover:underline"
-                            >
-                                Office Cleaning
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href="/oven-cleaning-geelong"
-                                title="Oven Cleaning Service Geelong"
-                                className="hover:underline"
-                            >
-                                Oven Cleaning
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href="/carpet-cleaning-geelong"
-                                title="Carpet Cleaning Service Geelong"
-                                className="hover:underline"
-                            >
-                                Carpet Cleaning
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href="/window-cleaning-geelong"
-                                title="Window Cleaning Service Geelong"
-                                className="hover:underline"
-                            >
-                                Window Cleaning
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href="/after-builder-cleaning-geelong"
-                                title="Post Construction Cleaning Service Geelong"
-                                className="hover:underline"
-                            >
-                                Construction Cleaning
-                            </Link>
-                        </li>
+                    <div className="text-sm" itemProp="description">
+                        {siteConfig.description}
+                    </div>
+                </div>
+                <div className="flex flex-col gap-2 prose prose-quoteless prose-neutral dark:prose-invert text-sm">
+                    <ul>
+                        {items.map(i => (
+                            <li key={i.title}>
+                                <Link href={i.href} className="no-underline">
+                                    {i.title}
+                                </Link>
+                            </li>
+                        ))}
                     </ul>
                 </div>
-            </section>
+            </div>
         </Shell>
     );
 }

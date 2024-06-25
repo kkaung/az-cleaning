@@ -41,11 +41,11 @@ export default function Hero({ location, ...props }: HeroProps) {
         >
             <PageHeader className="mx-auto text-center space-y-6">
                 <PageHeaderHeading>
-                    Top-rated Window Cleaning Service in {location}
+                    The #1 Residental Window Cleaning Service In {location}
                 </PageHeaderHeading>
                 <PageHeaderDescription className="mx-auto">
-                    Say goodbye to grease and grime with our thorough window
-                    cleaning service.
+                    Tired of peering through a hazy world of dirty windows? Let
+                    our expert {location} window cleaners be your heroes!
                 </PageHeaderDescription>
             </PageHeader>
             <ul className="mx-auto gird text-center space-y-2 mt-6 font-semibold">

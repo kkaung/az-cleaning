@@ -18,9 +18,11 @@ import AvatarFour from '/public/avatars/avatar-04.jpg';
 import AvatarFive from '/public/avatars/avatar-05.jpg';
 import AvatarSix from '/public/avatars/avatar-06.jpeg';
 
-interface HeroProps extends HTMLAttributes<HTMLElement> {}
+interface HeroProps extends HTMLAttributes<HTMLElement> {
+    location: string;
+}
 
-export default function Hero({ ...props }: HeroProps) {
+export default function Hero({ location, ...props }: HeroProps) {
     const avatars = [
         { name: 'Toni', image: AvatarOne },
         { name: 'Ashly', image: AvatarTwo },
@@ -38,11 +40,13 @@ export default function Hero({ ...props }: HeroProps) {
         >
             <PageHeader className="mx-auto text-center space-y-6">
                 <PageHeaderHeading>
-                    Geelong&apos;s Most In Demand Cleaning Company
+                    {location}&apos;s #1 House Cleaning & Maid Services
                 </PageHeaderHeading>
                 <PageHeaderDescription className="mx-auto">
-                    Say goodbye to grease and grime with our thorough cleaning
-                    service.
+                    Elevate your living space with {location}&apos;s top-rated
+                    house cleaning service. Trust our expert house cleaners for
+                    efficient, eco-friendly, and customizable cleaning solutions
+                    because you deserve the best.
                 </PageHeaderDescription>
             </PageHeader>
             <ul className="mx-auto gird text-center space-y-2 mt-6 font-semibold">

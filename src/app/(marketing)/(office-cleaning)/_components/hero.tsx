@@ -40,11 +40,15 @@ export default function Hero({ location, ...props }: HeroProps) {
         >
             <PageHeader className="mx-auto text-center space-y-6">
                 <PageHeaderHeading>
-                    {location}&apos;s Most In Demand Office Cleaning Service
+                    The #1 Office Cleaning Service in {location}
                 </PageHeaderHeading>
                 <PageHeaderDescription className="mx-auto">
-                    Say goodbye to grease and grime with our thorough office
-                    cleaning service.
+                    Tired of cluttered desks and stale air hindering your
+                    office&apos;s potential? Let&apos;s face it, a clean
+                    workspace is a happy and productive workspace. That&apos;s
+                    where we come in, {location}&apos;s most trusted in-office
+                    cleaning service, dedicated to transforming your office
+                    environment.
                 </PageHeaderDescription>
             </PageHeader>
             <ul className="mx-auto gird text-center space-y-2 mt-6 font-semibold">

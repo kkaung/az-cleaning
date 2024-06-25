@@ -42,54 +42,6 @@ export const Page = defineDocumentType(() => ({
     computedFields,
 }));
 
-export const Service = defineDocumentType(() => ({
-    name: 'Service',
-    filePathPattern: `services/**/*.mdx`,
-    contentType: 'mdx',
-    fields: {
-        title: {
-            type: 'string',
-            required: true,
-        },
-        description: {
-            type: 'string',
-        },
-    },
-    computedFields,
-}));
-
-export const Product = defineDocumentType(() => ({
-    name: 'Product',
-    filePathPattern: `products/**/*.mdx`,
-    contentType: 'mdx',
-    fields: {
-        title: {
-            type: 'string',
-            required: true,
-        },
-        description: {
-            type: 'string',
-        },
-        price: {
-            type: 'number',
-            required: true,
-        },
-        image: {
-            type: 'string',
-            required: true,
-        },
-        ratingValue: {
-            type: 'string',
-            required: true,
-        },
-        ratingCount: {
-            type: 'number',
-            required: true,
-        },
-    },
-    computedFields,
-}));
-
 export const Post = defineDocumentType(() => ({
     name: 'Post',
     filePathPattern: `blog/**/*.mdx`,
@@ -116,7 +68,15 @@ export const Post = defineDocumentType(() => ({
         },
         category: {
             type: 'enum',
-            options: [''],
+            options: ['reviews', 'guides'],
+            required: false,
+        },
+        ratingValue: {
+            type: 'string',
+            required: false,
+        },
+        ratingCount: {
+            type: 'number',
             required: false,
         },
     },
@@ -126,7 +86,7 @@ export const Post = defineDocumentType(() => ({
 export default makeSource({
     contentDirPath: './src/content',
     disableImportAliasWarning: true,
-    documentTypes: [Page, Post, Service, Product],
+    documentTypes: [Page, Post],
     mdx: {
         remarkPlugins: [remarkGfm],
         rehypePlugins: [

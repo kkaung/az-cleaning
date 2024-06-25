@@ -41,11 +41,12 @@ export default function Hero({ location, ...props }: HeroProps) {
         >
             <PageHeader className="mx-auto text-center space-y-6">
                 <PageHeaderHeading>
-                    Posts Construction Cleaning Service in {location}
+                    The #1 After Builder Cleaning Service in {location}
                 </PageHeaderHeading>
                 <PageHeaderDescription className="mx-auto">
-                    Say goodbye to grease and grime with our thorough
-                    construction cleaning service.
+                    {location} builders left a mess? We&apos;ll transform your
+                    construction site into a sparkling clean dream home. Book
+                    online today!
                 </PageHeaderDescription>
             </PageHeader>
             <ul className="mx-auto gird text-center space-y-2 mt-6 font-semibold">

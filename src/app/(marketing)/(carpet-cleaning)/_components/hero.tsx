@@ -5,12 +5,12 @@ import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import React, { type HTMLAttributes } from 'react';
+import Image from 'next/image';
 import {
     PageHeader,
     PageHeaderDescription,
     PageHeaderHeading,
 } from '@/components/page-header';
-import Image from 'next/image';
 import AvatarOne from '/public/avatars/avatar-01.png';
 import AvatarTwo from '/public/avatars/avatar-02.png';
 import AvatarThree from '/public/avatars/avatar-03.png';
@@ -40,11 +40,12 @@ export default function Hero({ location, ...props }: HeroProps) {
         >
             <PageHeader className="mx-auto text-center space-y-6">
                 <PageHeaderHeading>
-                    Top-rated Carpet Cleaning Service In {location}
+                    The #1 Carpet Cleaners In {location}
                 </PageHeaderHeading>
                 <PageHeaderDescription className="mx-auto">
-                    Say goodbye to grease and grime with our thorough deep
-                    cleaning service.
+                    Our capret cleaning service go beyond surface-level shine,
+                    using eco-friendly, safe methods to tackle even the toughest
+                    dirt, stains, and allergens.
                 </PageHeaderDescription>
             </PageHeader>
             <ul className="mx-auto gird text-center space-y-2 mt-6 font-semibold">
@@ -103,7 +104,7 @@ export default function Hero({ location, ...props }: HeroProps) {
                         ))}
                     </div>
                     <p className="text-sm font-semibold">
-                        Trusted by 1000+ families in Geelong
+                        Trusted by 1000+ families in {location}
                     </p>
                 </div>
             </div>

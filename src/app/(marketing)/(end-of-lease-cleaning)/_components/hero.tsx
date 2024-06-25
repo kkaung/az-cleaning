@@ -25,12 +25,12 @@ interface HeroProps extends HTMLAttributes<HTMLElement> {
 
 export default function Hero({ location, ...props }: HeroProps) {
     const avatars = [
-        { name: '', image: AvatarOne },
-        { name: '', image: AvatarTwo },
-        { name: '', image: AvatarThree },
-        { name: '', image: AvatarFour },
-        { name: '', image: AvatarFive },
-        { name: '', image: AvatarSix },
+        { name: 'Toni', image: AvatarOne },
+        { name: 'Ashly', image: AvatarTwo },
+        { name: 'Kelvin', image: AvatarThree },
+        { name: 'Rose', image: AvatarFour },
+        { name: 'Sarah', image: AvatarFive },
+        { name: 'Lilly', image: AvatarSix },
     ];
 
     return (
@@ -41,11 +41,12 @@ export default function Hero({ location, ...props }: HeroProps) {
         >
             <PageHeader className="mx-auto text-center space-y-6">
                 <PageHeaderHeading>
-                    End Of Lease Cleaning Service In {location}
+                    The #1 End Of Lease Cleaning Service In {location}
                 </PageHeaderHeading>
                 <PageHeaderDescription className="mx-auto">
-                    Enjoy Seamless Transitions With our Move Out Cleaning
-                    Service
+                    Get your bond back guaranteed with our bond cleaning
+                    service. We tackle all the move-out must-haves, leaving your
+                    property sparkling and ready for inspection.
                 </PageHeaderDescription>
             </PageHeader>
             <ul className="mx-auto gird text-center space-y-2 mt-6 font-semibold">
@@ -104,7 +105,7 @@ export default function Hero({ location, ...props }: HeroProps) {
                         ))}
                     </div>
                     <p className="text-sm font-semibold">
-                        Trusted by 1000+ families in Geelong
+                        Trusted by 1000+ families in {location}
                     </p>
                 </div>
             </div>
